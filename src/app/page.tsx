@@ -28,34 +28,35 @@ export default function Page() {
         </div>
       </section>
 
-      {/* SERVICES */}
+            {/* SERVICES */}
       <section id="services" className="section">
         <div className="container">
           <h2>Services</h2>
           <div className="cards">
-            <div className="card">
+            <a className="card" href="/services/rehab">
               <h3>Rehab Plans</h3>
               <p>Injury-based or fully individualized recovery programs.</p>
-            </div>
-            <div className="card">
+            </a>
+            <a className="card" href="/services/prehab">
               <h3>Pre-hab Planning</h3>
               <p>Sport-specific or individualized injury prevention strategies.</p>
-            </div>
-            <div className="card">
+            </a>
+            <a className="card" href="/services/performance">
               <h3>Exercise Prescription for Performance</h3>
               <p>Custom training plans to improve strength, endurance, or speed.</p>
-            </div>
-            <div className="card">
+            </a>
+            <a className="card" href="/services/nutrition">
               <h3>Sports Nutrition</h3>
               <p>Guidance for fueling, recovery, and long-term performance health.</p>
-            </div>
-            <div className="card">
+            </a>
+            <a className="card" href="/services/concierge">
               <h3>Concierge Physician Services</h3>
               <p>Ongoing direct access and oversight from a sports medicine physician.</p>
-            </div>
+            </a>
           </div>
         </div>
       </section>
+
 
       {/* CTA */}
       <section className="section">
