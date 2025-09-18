@@ -1,93 +1,43 @@
-export default function Page() {
+export const metadata = {
+  title: "Rehab Plans | Abbott Sport Performance",
+  description:
+    "Injury-based or individualized recovery programs designed by a sports medicine physician.",
+};
+
+export default function RehabPage() {
   return (
-    <main>
-      {/* HERO */}
-      <section className="hero">
-        <div className="container" style={{padding:0}}>
-          <h1>Physician-designed, custom exercise prescription</h1>
-          <p>
-            Evidence-based programs for athletes — whether you’re healing,
-            preventing injury, or chasing peak performance.
-          </p>
-          <div className="btns">
-            <a
-              className="btn primary"
-              href="https://calendly.com/YOURNAME/consultation"
-              target="_blank"
-            >
-              Book a Consultation
-            </a>
-            <a
-              className="btn ghost"
-              href="https://buy.stripe.com/YOUR_PAYMENT_LINK"
-              target="_blank"
-            >
-              Buy a Training Plan
-            </a>
-          </div>
-        </div>
-      </section>
+    <main className="container">
+      <h1>Rehab Plans</h1>
+      <p>
+        Physician-directed rehabilitation for acute and chronic injuries. We align
+        objective milestones (pain, ROM, strength, tolerance) with your sport’s
+        demands to progress safely and predictably.
+      </p>
 
-            {/* SERVICES */}
-      <section id="services" className="section">
-        <div className="container">
-          <h2>Services</h2>
-          <div className="cards">
-            <a className="card" href="/services/rehab">
-              <h3>Rehab Plans</h3>
-              <p>Injury-based or fully individualized recovery programs.</p>
-            </a>
-            <a className="card" href="/services/prehab">
-              <h3>Pre-hab Planning</h3>
-              <p>Sport-specific or individualized injury prevention strategies.</p>
-            </a>
-            <a className="card" href="/services/performance">
-              <h3>Exercise Prescription for Performance</h3>
-              <p>Custom training plans to improve strength, endurance, or speed.</p>
-            </a>
-            <a className="card" href="/services/nutrition">
-              <h3>Sports Nutrition</h3>
-              <p>Guidance for fueling, recovery, and long-term performance health.</p>
-            </a>
-            <a className="card" href="/services/concierge">
-              <h3>Concierge Physician Services</h3>
-              <p>Ongoing direct access and oversight from a sports medicine physician.</p>
-            </a>
-          </div>
-        </div>
-      </section>
+      <h2>What’s included</h2>
+      <ul>
+        <li>Video consult and targeted assessment</li>
+        <li>Diagnosis-informed exercise plan with weekly progressions</li>
+        <li>Pain modulation strategies and load management</li>
+        <li>Return-to-sport criteria and testing</li>
+      </ul>
 
-
-      {/* CTA */}
-      <section className="section">
-        <div className="container">
-          <div className="cards">
-            <div className="card">
-              <h3>Book a Consultation</h3>
-              <p>One-on-one video visit to evaluate, plan, and set your next steps.</p>
-              <a
-                className="btn primary"
-                href="https://calendly.com/YOURNAME/consultation"
-                target="_blank"
-              >
-                Schedule now
-              </a>
-            </div>
-            <div className="card">
-              <h3>Purchase a Training Plan</h3>
-              <p>4-week custom plan with check-ins, tailored to your sport and schedule.</p>
-              <a
-                className="btn primary"
-                href="https://buy.stripe.com/YOUR_PAYMENT_LINK"
-                target="_blank"
-              >
-                Checkout
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <div className="btns">
+        <a
+          className="btn primary"
+          href="https://calendly.com/YOURNAME/consultation"
+          target="_blank"
+        >
+          Book a Consultation
+        </a>
+        <a
+          className="btn ghost"
+          href="https://buy.stripe.com/YOUR_PAYMENT_LINK"
+          target="_blank"
+        >
+          Purchase a Plan
+        </a>
+      </div>
     </main>
   );
 }
-
