@@ -1,43 +1,31 @@
+import Link from "next/link";
+
 export const metadata = {
-  title: "Rehab Plans | Abbott Sport Performance",
+  title: "Rehab Programs | Abbott Sport Performance",
   description:
-    "Injury-based or individualized recovery programs designed by a sports medicine physician.",
+    "Injury-specific rehab plans or custom rehab schedules with physician oversight.",
 };
 
-export default function RehabPage() {
+export default function RehabProgramsPage() {
   return (
     <main className="container">
-      <h1>Rehab Plans</h1>
+      <h1>Rehab Programs</h1>
       <p>
-        Physician-directed rehabilitation for acute and chronic injuries. We align
-        objective milestones (pain, ROM, strength, tolerance) with your sport’s
-        demands to progress safely and predictably.
+        Injury-based plans with clear milestones, or a fully individualized rehab schedule.
+        We align pain, ROM, strength, and tolerance targets with the demands of your sport.
       </p>
 
-      <h2>What’s included</h2>
+      <h2>Options</h2>
       <ul>
-        <li>Video consult and targeted assessment</li>
-        <li>Diagnosis-informed exercise plan with weekly progressions</li>
-        <li>Pain modulation strategies and load management</li>
-        <li>Return-to-sport criteria and testing</li>
+        <li>Injury-specific rehab plans — <strong>$195/month</strong></li>
+        <li>Custom rehab schedule (1:1 consult + individualized plan) — <strong>$295/month</strong></li>
       </ul>
 
       <div className="btns">
-        <a
-          className="btn primary"
-          href="https://calendly.com/YOURNAME/consultation"
-          target="_blank"
-        >
-          Book a Consultation
-        </a>
-        <a
-          className="btn ghost"
-          href="https://buy.stripe.com/YOUR_PAYMENT_LINK"
-          target="_blank"
-        >
-          Purchase a Plan
-        </a>
+        <Link className="btn primary" href="/consult">Start with a Consultation</Link>
+        <Link className="btn ghost" href="/">Back to Home</Link>
       </div>
     </main>
   );
 }
+
