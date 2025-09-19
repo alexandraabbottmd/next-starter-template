@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export const metadata = {
   title: "Exercise Programs | Abbott Sport Performance",
   description: "Sport-specific training plans or fully custom schedules.",
@@ -16,8 +18,8 @@ export default function ExerciseProgramsPage() {
       </ul>
 
       <div className="btns">
-        <a className="btn primary" href="/consult">Start with a Consultation</a>
-        <a className="btn ghost" href="/">Back to Home</a>
+        <Link className="btn primary" href="/consult">Start with a Consultation</Link>
+        <Link className="btn ghost" href="/">Back to Home</Link>
       </div>
     </main>
   );
