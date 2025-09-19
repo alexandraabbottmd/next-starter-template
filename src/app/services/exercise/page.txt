@@ -1,0 +1,24 @@
+export const metadata = {
+  title: "Exercise Programs | Abbott Sport Performance",
+  description: "Sport-specific training plans or fully custom schedules.",
+};
+
+export default function ExerciseProgramsPage() {
+  return (
+    <main className="container">
+      <h1>Exercise Programs</h1>
+      <p>Choose a sport-specific plan or a fully custom training schedule built around your real week.</p>
+
+      <h2>Options</h2>
+      <ul>
+        <li>Sport-specific training plans — <strong>$195/month</strong></li>
+        <li>Custom training schedule (1:1 consult + individualized plan) — <strong>$295/month</strong></li>
+      </ul>
+
+      <div className="btns">
+        <a className="btn primary" href="/consult">Start with a Consultation</a>
+        <a className="btn ghost" href="/">Back to Home</a>
+      </div>
+    </main>
+  );
+}
