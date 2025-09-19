@@ -1,27 +1,37 @@
-export const metadata = {
+import "./globals.css";
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+
+export const metadata: Metadata = {
   title: "Abbott Sport Performance",
-  description: "Evidence-based coaching, rehab, and training plans.",
+  description: "Physician-designed, custom exercise prescription.",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      {/* globals.css is already imported by Next in this file by default in most templates.
-          If you see an import at the top like `import "./globals.css"`, keep it. */}
       <body>
         <div className="container">
-          <nav>
-            <div className="brand">Abbott Sport Performance</div>
-            <div className="row" style={{gap:12}}>
-              <a href="/">Home</a>
-              <a href="#services">Services</a>
-              <a href="/consult">Consultation</a>
-              <a href="/shop">Shop</a>
-            </div>
+          <header className="masthead">
+            <h1 className="site-title">Abbott Sport Performance</h1>
+            <p className="tagline">Physician-designed, custom exercise prescription</p>
+          </header>
+
+          <nav className="navbar" aria-label="Primary">
+            <ul className="menu" role="menubar">
+              <li className="has-dropdown" role="none">
+                <a role="menuitem" href="/#services">Services</a>
+                <ul className="dropdown" role="menu" aria-label="Services">
+                  <li role="none"><a role="menuitem" href="/services/exercise">Exercise Programs</a></li>
+                  <li role="none"><a role="menuitem" href="/services/rehab">Rehab Programs</a></li>
+                  <li role="none"><a role="menuitem" href="/services/nutrition">Nutrition</a></li>
+                  <li role="none"><a role="menuitem" href="/services/concierge">Concierge Medicine</a></li>
+                </ul>
+              </li>
+              <li role="none"><a role="menuitem" href="/consult">Consultation</a></li>
+              <li role="none"><a role="menuitem" href="/about">About Dr. Abbott</a></li>
+              <li role="none"><a role="menuitem" href="/#contact">Contact</a></li>
+            </ul>
           </nav>
 
           {children}
@@ -34,3 +44,4 @@ export default function RootLayout({
     </html>
   );
 }
+
