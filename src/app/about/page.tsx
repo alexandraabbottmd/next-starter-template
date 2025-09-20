@@ -65,7 +65,7 @@ export default function AboutPage() {
               target="_blank"
               className="underline hover:text-gray-300"
             >
-              View Dr. Abbott’s publications
+              Dr. Abbott’s work
             </Link>
           </p>
         </section>
