@@ -7,8 +7,8 @@ export default function HomePage() {
     <main className="hero">
       {/* Background image */}
       <Image
-        src="/about/action.jpg"  // 👈 adjust path to your uploaded image
-        alt="Hero background"
+        src="/about/action.jpg"   // 👈 adjust path to your uploaded image
+        alt="Athlete training"
         fill
         priority
         className="hero-bg"
@@ -29,7 +29,11 @@ export default function HomePage() {
 
       {/* Hero text */}
       <div className="hero-text">
-        <h1>ABBOTT<br />SPORT PERFORMANCE</h1>
+        <h1>
+          ABBOTT
+          <br />
+          SPORT PERFORMANCE
+        </h1>
         <div className="tagline">SCIENCE IN EVERY REP</div>
       </div>
 
