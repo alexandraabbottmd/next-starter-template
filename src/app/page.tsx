@@ -1,12 +1,21 @@
 "use client";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
     <main className="hero">
-      {/* Nav */}
-      <nav className="nav">
+      {/* Background image */}
+      <Image
+        src="/about/action.jpg"  // 👈 adjust path to your uploaded image
+        alt="Hero background"
+        fill
+        priority
+        className="hero-bg"
+      />
+
+      {/* Navbar */}
+      <div className="nav">
         <div className="dropdown">
           <button className="dropbtn">Services ▾</button>
           <div className="dropdown-content">
@@ -16,27 +25,12 @@ export default function HomePage() {
             <Link href="/services/concierge">Concierge Medicine</Link>
           </div>
         </div>
-      </nav>
-
-      {/* Background Image */}
-      <div className="hero-bg">
-        <Image
-          src="/hero.jpg"
-          alt="Athlete training"
-          fill
-          priority
-          style={{
-            objectFit: "contain", // no stretching
-            objectPosition: "center top",
-            backgroundColor: "black", // letterbox margins
-          }}
-        />
       </div>
 
-      {/* Text Overlay */}
+      {/* Hero text */}
       <div className="hero-text">
         <h1>ABBOTT<br />SPORT PERFORMANCE</h1>
-        <p className="tagline">SCIENCE IN EVERY REP</p>
+        <div className="tagline">SCIENCE IN EVERY REP</div>
       </div>
 
       {/* About link */}
