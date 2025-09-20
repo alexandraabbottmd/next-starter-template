@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Link from "next/link";  // ✅ fixed import
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
@@ -35,40 +35,21 @@ export default function AboutPage() {
         </Link>
 
         {/* Services dropdown */}
-        <div style={{ position: "relative" }}>
+        <div className="dropdown-wrapper" style={{ position: "relative" }}>
           <span style={{ cursor: "pointer", fontWeight: "bold" }}>Services ▾</span>
-          <div
-            style={{
-              display: "none",
-              position: "absolute",
-              right: 0,
-              backgroundColor: "black",
-              padding: "0.5rem 0",
-              minWidth: "200px",
-              zIndex: 200,
-            }}
-            className="dropdown"
-          >
-            <Link href="/services/exercise" style={{ display: "block", padding: "0.5rem 1rem", color: "white", textDecoration: "none" }}>Exercise Programs</Link>
-            <Link href="/services/rehab" style={{ display: "block", padding: "0.5rem 1rem", color: "white", textDecoration: "none" }}>Rehab Programs</Link>
-            <Link href="/services/nutrition" style={{ display: "block", padding: "0.5rem 1rem", color: "white", textDecoration: "none" }}>Nutrition</Link>
-            <Link href="/services/concierge" style={{ display: "block", padding: "0.5rem 1rem", color: "white", textDecoration: "none" }}>Concierge Medicine</Link>
+          <div className="dropdown">
+            <Link href="/services/exercise">Exercise Programs</Link>
+            <Link href="/services/rehab">Rehab Programs</Link>
+            <Link href="/services/nutrition">Nutrition</Link>
+            <Link href="/services/concierge">Concierge Medicine</Link>
           </div>
         </div>
-
-        {/* Hover effect via inline JS */}
-        <style jsx>{`
-          nav div:hover .dropdown {
-            display: block;
-          }
-        `}</style>
       </nav>
 
       {/* ✅ MAIN CONTENT */}
       <section style={{ paddingTop: "6rem", maxWidth: "1000px", margin: "0 auto" }}>
         <h1 style={{ fontSize: "2.5rem", marginBottom: "2rem" }}>Dr Abbott</h1>
 
-        {/* Headshot + intro */}
         <div style={{ display: "flex", alignItems: "center", gap: "2rem", marginBottom: "4rem" }}>
           <Image
             src="/about/headshotcolor.jpg"
@@ -82,6 +63,34 @@ export default function AboutPage() {
           </p>
         </div>
       </section>
+
+      {/* ✅ Scoped CSS */}
+      <style jsx>{`
+        .dropdown {
+          display: none;
+          position: absolute;
+          right: 0;
+          background-color: black;
+          padding: 0.5rem 0;
+          min-width: 200px;
+          z-index: 200;
+        }
+
+        .dropdown a {
+          display: block;
+          padding: 0.5rem 1rem;
+          color: white;
+          text-decoration: none;
+        }
+
+        .dropdown a:hover {
+          background-color: #222;
+        }
+
+        .dropdown-wrapper:hover .dropdown {
+          display: block;
+        }
+      `}</style>
     </main>
   );
 }
