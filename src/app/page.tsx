@@ -14,19 +14,19 @@ export default function HomePage() {
           backgroundColor: "black",
         }}
       >
-        {/* ✅ Use Next.js <Image> so hero.jpg always displays */}
+        {/* ✅ Hero image */}
         <Image
           src="/hero.jpg"
           alt="Hero"
           fill
           priority
           style={{
-            objectFit: "contain", // keeps aspect ratio, no stretch
-            objectPosition: "center",
+            objectFit: "contain",      // keeps proportions
+            objectPosition: "center",  // ensures photo is centered
           }}
         />
 
-        {/* Title + Tagline */}
+        {/* Title + tagline */}
         <div
           style={{
             position: "absolute",
@@ -65,7 +65,6 @@ export default function HomePage() {
         {/* About link */}
         <a
           href="/about"
-          className="about-link"
           style={{
             position: "absolute",
             bottom: "5%",
