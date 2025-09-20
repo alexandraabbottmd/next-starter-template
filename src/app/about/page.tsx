@@ -1,85 +1,122 @@
-export const metadata = {
-  title: "About Dr. Abbott | Abbott Sport Performance",
-  description: "Learn about Dr. Alexandra Abbott’s background, her approach to sports medicine, and her philosophy in athlete development.",
-};
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <main
-      style={{
-        backgroundColor: "black",
-        color: "white",
-        fontFamily: "sans-serif",
-        padding: "2rem",
-        maxWidth: "900px",
-        margin: "0 auto",
-      }}
-    >
-      {/* Hero intro section */}
-      <section style={{ marginBottom: "3rem", textAlign: "center" }}>
-        <h1 style={{ fontSize: "3rem", fontWeight: 700, marginBottom: "1rem" }}>
-          Get to Know Dr. Alexandra Abbott
-        </h1>
-        <p style={{ fontSize: "1.2rem", lineHeight: 1.6 }}>
-          I’m a sports medicine physician dedicated to helping athletes recover, prevent injury, and achieve their peak performance. My practice combines evidence-based rehabilitation, sport-specific training, and personalized care to support your goals.
-        </p>
-      </section>
+    <main className="bg-black text-white font-sans">
+      {/* Page container */}
+      <div className="max-w-5xl mx-auto px-6 py-16 space-y-20">
+        
+        {/* Header */}
+        <section className="text-center space-y-6">
+          <h1 className="text-4xl md:text-5xl font-bold">Dr. Abbott</h1>
+          <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-8">
+            <Image
+              src="/about/profile.jpg" // replace with your headshot file path
+              alt="Dr. Alexandra Abbott"
+              width={250}
+              height={250}
+              className="rounded-xl shadow-lg"
+            />
+            <p className="text-lg max-w-xl mt-6 md:mt-0">
+              Alexandra Abbott, MD is a board-certified sports medicine
+              physician. Her expertise comes from years of education, training,
+              and experience.
+            </p>
+          </div>
+        </section>
 
-      {/* Profile / Bio */}
-      <section style={{ marginBottom: "2rem" }}>
-        {/* Optional image placeholder */}
-        <div
-          style={{
-            width: "200px",
-            height: "200px",
-            backgroundColor: "#333",
-            borderRadius: "100px",
-            marginBottom: "1.5rem",
-          }}
-        >
-          {/* Replace with actual photo later */}
-        </div>
-        <p style={{ marginBottom: "1.5rem", lineHeight: 1.6 }}>
-          Dr. Abbott earned her medical degree from XYZ University, followed by fellowship training in sports medicine. She has worked with collegiate and professional athletes, focusing on injury recovery, biomechanics, and human performance.
-        </p>
-        <p style={{ marginBottom: "1.5rem", lineHeight: 1.6 }}>
-          Her philosophy is rooted in collaboration — partnering with you to build plans that are realistic, measurable, and tailored to your sport, demands, and personal journey.
-        </p>
-        <p style={{ marginBottom: "1.5rem", lineHeight: 1.6 }}>
-          With concierge services, Dr. Abbott ensures direct access and personalized feedback, avoiding one-size-fits-all programs. Every plan includes ongoing assessment, adjustments, and adherence to the latest evidence in sports science.
-        </p>
-      </section>
+        {/* Collegiate athlete */}
+        <section>
+          <h2 className="text-2xl font-semibold mb-6">Collegiate athlete</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Image
+              src="/about/athlete1.jpg"
+              alt="Collegiate athlete"
+              width={400}
+              height={300}
+              className="rounded-xl shadow-md"
+            />
+            <Image
+              src="/about/athlete2.jpg"
+              alt="Collegiate athlete"
+              width={400}
+              height={300}
+              className="rounded-xl shadow-md"
+            />
+          </div>
+        </section>
 
-      {/* Additional sections (optionally) */}
-      <section style={{ marginBottom: "2.5rem" }}>
-        <h2 style={{ fontSize: "2rem", fontWeight: 600, marginBottom: "1rem" }}>
-          Education & Credentials
-        </h2>
-        <ul style={{ lineHeight: 1.6, marginLeft: "1.25rem" }}>
-          <li>MD, Sports Medicine — XYZ University</li>
-          <li>Fellowship in Athletic Performance</li>
-          <li>Board-Certified in Sports Medicine</li>
-          <li>Years of experience with X, Y, Z teams / athletes</li>
-        </ul>
-      </section>
+        {/* Research + publications */}
+        <section>
+          <h2 className="text-2xl font-semibold mb-6">Research & Publications</h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
+            <Image src="/about/research1.jpg" alt="Research" width={300} height={200} className="rounded-lg shadow" />
+            <Image src="/about/research2.jpg" alt="Research" width={300} height={200} className="rounded-lg shadow" />
+            <Image src="/about/research3.jpg" alt="Research" width={300} height={200} className="rounded-lg shadow" />
+            <Image src="/about/research4.jpg" alt="Research" width={300} height={200} className="rounded-lg shadow" />
+          </div>
+          <p>
+            Prolific research in sports medicine, orthopedics, and pediatrics.{" "}
+            <Link
+              href="https://pubmed.ncbi.nlm.nih.gov/?term=Abbott+A&cauthor_id=35253062"
+              target="_blank"
+              className="underline hover:text-gray-300"
+            >
+              View Dr. Abbott’s publications
+            </Link>
+          </p>
+        </section>
 
-      {/* Call to action */}
-      <section style={{ marginBottom: "2rem", textAlign: "center" }}>
-        <a
-          href="/services"
-          style={{
-            display: "inline-block",
-            padding: "0.75rem 1.5rem",
-            backgroundColor: "white",
-            color: "black",
-            borderRadius: "4px",
-            textDecoration: "none",
-            fontWeight: 600,
-          }}
-        >
-          Explore Services
-        </a>
-      </section>
+        {/* Athletes cared for */}
+        <section>
+          <h2 className="text-2xl font-semibold mb-6">Thousands of athletes cared for</h2>
+          <p className="mb-6">Including NCAA Division I, NBA, MLB athletes.</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Image src="/about/rosebowl.jpg" alt="Rose Bowl" width={400} height={300} className="rounded-xl shadow-md" />
+            <Image src="/about/ucla.jpg" alt="UCLA" width={400} height={300} className="rounded-xl shadow-md" />
+            <Image src="/about/mlb.jpg" alt="MLB" width={400} height={300} className="rounded-xl shadow-md" />
+          </div>
+          <p className="mt-4 text-sm">
+            She currently practices at{" "}
+            <Link
+              href="https://www.stanfordchildrens.org/en/doctor/d-alexandra-morgan-abbott.html"
+              target="_blank"
+              className="underline hover:text-gray-300"
+            >
+              Stanford Children’s
+            </Link>
+            .
+          </p>
+        </section>
+
+        {/* Passion & wellness */}
+        <section>
+          <h2 className="text-2xl font-semibold mb-6">
+            Lifelong passion and dedication to health, wellness, and physical fitness
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Image src="/about/training1.jpg" alt="Training" width={400} height={300} className="rounded-xl shadow-md" />
+            <Image src="/about/training2.jpg" alt="Training" width={400} height={300} className="rounded-xl shadow-md" />
+          </div>
+        </section>
+
+        {/* Closing */}
+        <section className="text-center space-y-6">
+          <p className="text-lg max-w-2xl mx-auto">
+            As a primary care physician <span className="italic">who has done the reps herself</span>, Dr. Abbott applies cutting-edge research in sports performance, injury prevention and treatment, nutrition, and more to help you turn the corner and reach your full potential.
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block px-6 py-3 bg-white text-black rounded-lg font-semibold hover:bg-gray-200"
+          >
+            Ask Dr. Abbott → Consultation Form
+          </Link>
+        </section>
+
+      </div>
     </main>
   );
 }
