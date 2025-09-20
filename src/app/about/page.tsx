@@ -12,12 +12,11 @@ export default function AboutPage() {
           position: "fixed",
           top: 0,
           left: 0,
-          right: 0,
           width: "100%",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "1rem 2rem", // ✅ consistent padding
+          padding: "1rem 2rem", // ✅ now controls left/right consistently
           zIndex: 100,
           backgroundColor: "rgba(0,0,0,0.6)",
         }}
@@ -42,7 +41,7 @@ export default function AboutPage() {
             Services ▾
           </button>
           <div
-            className="absolute right-0 hidden group-hover:flex flex-col mt-2 bg-black min-w-[200px]"
+            className="absolute right-0 hidden group-hover:flex flex-col mt-2 bg-black min-w-[200px] z-50"
           >
             <Link href="/services/exercise" className="px-4 py-2 text-white hover:bg-gray-800">
               Exercise Programs
