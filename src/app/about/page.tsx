@@ -14,17 +14,15 @@ export default function AboutPage() {
           left: 0,
           right: 0,
           width: "100%",
-          maxWidth: "1200px", // ✅ keeps nav aligned with content
-          margin: "0 auto",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "1rem 2rem",
+          padding: "1rem 2rem", // ✅ consistent padding
           zIndex: 100,
           backgroundColor: "rgba(0,0,0,0.6)",
         }}
       >
-        {/* Left: Site Title (link to home) */}
+        {/* Left: Site Title */}
         <Link href="/" style={{ color: "white", fontSize: "1rem", fontWeight: "bold", textDecoration: "none" }}>
           ABBOTT SPORT PERFORMANCE
         </Link>
@@ -44,7 +42,7 @@ export default function AboutPage() {
             Services ▾
           </button>
           <div
-            className="absolute right-0 hidden group-hover:flex flex-col mt-2 bg-black min-w-[200px]" // ✅ removed border
+            className="absolute right-0 hidden group-hover:flex flex-col mt-2 bg-black min-w-[200px]"
           >
             <Link href="/services/exercise" className="px-4 py-2 text-white hover:bg-gray-800">
               Exercise Programs
