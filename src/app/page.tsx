@@ -85,7 +85,7 @@ export default function HomePage() {
         <div
           style={{
             position: "absolute",
-            top: "30%", // slightly higher to match mockup negative space
+            top: "28%", // adjusted to sit higher
             left: "60px",
             zIndex: 5,
             color: "#fff",
@@ -100,10 +100,10 @@ export default function HomePage() {
           </div>
           <div
             style={{
-              marginTop: "20px",
-              fontSize: "clamp(18px,2vw,24px)",
-              fontWeight: 400,
-              letterSpacing: "2px",
+              marginTop: "24px",
+              fontSize: "clamp(20px,2vw,26px)",
+              fontWeight: 500,
+              letterSpacing: "3px",
             }}
           >
             SCIENCE IN EVERY REP
