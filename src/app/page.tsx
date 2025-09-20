@@ -1,132 +1,39 @@
 "use client";
 
-import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-
-export const metadata = {
-  title: "Abbott Sport Performance",
-  description: "Physician-designed, evidence-based training and rehab.",
-};
+import "./globals.css";
 
 export default function HomePage() {
-  const [servicesOpen, setServicesOpen] = useState(false);
-
   return (
     <main>
-      <section
-        style={{
-          position: "relative",
-          height: "100vh",
-          width: "100vw",
-          overflow: "hidden",
-        }}
-        className="hero"
-      >
-        {/* Background image */}
-        <Image
-          src="/hero.jpg"
-          alt="Athlete training"
-          fill
-          priority
-          style={{
-            objectFit: "cover",
-            objectPosition: "center",
-            filter: "contrast(0.9) brightness(0.9) blur(1px)",
-          }}
-        />
-
-        {/* Top-right nav */}
-        <header
-          style={{
-            position: "absolute",
-            top: 24,
-            right: 24,
-            zIndex: 5,
-            color: "#fff",
-            fontWeight: 500,
-            fontSize: "14px",
-            letterSpacing: "1px",
-          }}
-        >
-          <nav>
-            <ul
-              style={{
-                display: "flex",
-                listStyle: "none",
-                margin: 0,
-                padding: 0,
-                gap: "20px",
-                position: "relative",
-              }}
-            >
-              <li
-                className={servicesOpen ? "open" : ""}
-                style={{ position: "relative" }}
-              >
-                <span
-                  onClick={() => setServicesOpen(!servicesOpen)}
-                  style={{ cursor: "pointer", userSelect: "none" }}
-                >
-                  Services ▾
-                </span>
-                <ul className="dropdown">
-                  <li><Link href="/services/exercise">Exercise</Link></li>
-                  <li><Link href="/services/rehab">Rehab</Link></li>
-                  <li><Link href="/services/nutrition">Nutrition</Link></li>
-                  <li><Link href="/services/concierge">Concierge</Link></li>
-                </ul>
-              </li>
-            </ul>
-          </nav>
-        </header>
-
-        {/* Title + tagline on left */}
-        <div
-          style={{
-            position: "absolute",
-            top: "28%", // adjusted to sit higher
-            left: "60px",
-            zIndex: 5,
-            color: "#fff",
-            lineHeight: 1.1,
-          }}
-        >
-          <div style={{ fontSize: "clamp(64px,8vw,96px)", fontWeight: 800 }}>
-            ABBOTT
+      <div className="hero">
+        {/* Navigation */}
+        <nav className="navbar">
+          <div className="nav-left"></div>
+          <div className="nav-right">
+            <div className="dropdown">
+              <button className="dropbtn">Services ▾</button>
+              <div className="dropdown-content">
+                <Link href="/services/exercise">Exercise Programs</Link>
+                <Link href="/services/rehab">Rehab Programs</Link>
+                <Link href="/services/nutrition">Nutrition</Link>
+                <Link href="/services/concierge">Concierge Medicine</Link>
+              </div>
+            </div>
           </div>
-          <div style={{ fontSize: "clamp(32px,4vw,48px)", fontWeight: 600 }}>
-            SPORT PERFORMANCE
-          </div>
-          <div
-            style={{
-              marginTop: "24px",
-              fontSize: "clamp(20px,2vw,26px)",
-              fontWeight: 500,
-              letterSpacing: "3px",
-            }}
-          >
-            SCIENCE IN EVERY REP
-          </div>
-        </div>
+        </nav>
 
-        {/* About link mid-right */}
-        <div
-          style={{
-            position: "absolute",
-            top: "45%",
-            right: "60px",
-            zIndex: 5,
-          }}
-        >
-          <Link
-            href="/about"
-            style={{ color: "#fff", fontSize: "18px", fontWeight: 500 }}
-          >
-            About Dr. Abbott →
-          </Link>
-        </div>
-      </section>
+        {/* Title */}
+        <h1 className="hero-title">ABBOTT<br />SPORT PERFORMANCE</h1>
+
+        {/* Tagline */}
+        <p className="hero-tagline">SCIENCE IN EVERY REP</p>
+
+        {/* About link */}
+        <Link href="/about" className="about-link">
+          About Dr. Abbott →
+        </Link>
+      </div>
     </main>
   );
 }
