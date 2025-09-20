@@ -1,4 +1,4 @@
-"use client"; // enable React hooks on this page
+"use client";
 
 import { useState } from "react";
 import Link from "next/link";
@@ -13,7 +13,7 @@ export default function HomePage() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <main style={{ margin: 0, padding: 0, overflow: "hidden" }}>
+    <main>
       <section
         style={{
           position: "relative",
@@ -32,7 +32,7 @@ export default function HomePage() {
           style={{
             objectFit: "cover",
             objectPosition: "center",
-            filter: "contrast(0.9) brightness(0.9) blur(1px)", // soften image
+            filter: "contrast(0.9) brightness(0.9) blur(1px)", // softened image
           }}
         />
 
@@ -73,36 +73,16 @@ export default function HomePage() {
                 </span>
                 <ul className="dropdown">
                   <li>
-                    <Link
-                      href="/services/exercise"
-                      style={{ display: "block", padding: "8px 16px", color: "#fff" }}
-                    >
-                      Exercise
-                    </Link>
+                    <Link href="/services/exercise">Exercise</Link>
                   </li>
                   <li>
-                    <Link
-                      href="/services/rehab"
-                      style={{ display: "block", padding: "8px 16px", color: "#fff" }}
-                    >
-                      Rehab
-                    </Link>
+                    <Link href="/services/rehab">Rehab</Link>
                   </li>
                   <li>
-                    <Link
-                      href="/services/nutrition"
-                      style={{ display: "block", padding: "8px 16px", color: "#fff" }}
-                    >
-                      Nutrition
-                    </Link>
+                    <Link href="/services/nutrition">Nutrition</Link>
                   </li>
                   <li>
-                    <Link
-                      href="/services/concierge"
-                      style={{ display: "block", padding: "8px 16px", color: "#fff" }}
-                    >
-                      Concierge
-                    </Link>
+                    <Link href="/services/concierge">Concierge</Link>
                   </li>
                 </ul>
               </li>
@@ -111,41 +91,7 @@ export default function HomePage() {
         </header>
 
         {/* Big title on bottom-left */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "120px",
-            left: "60px",
-            zIndex: 5,
-            color: "#fff",
-            lineHeight: 1.1,
-          }}
-        >
-          <div style={{ fontSize: "clamp(48px,8vw,96px)", fontWeight: 800 }}>
-            ABBOTT
-          </div>
-          <div style={{ fontSize: "clamp(28px,4vw,48px)", fontWeight: 600 }}>
-            SPORT PERFORMANCE
-          </div>
+        <div className="logo-title">
+          <div className="line1">ABBOTT</div>
+          <div className="line2">SPORT PERFORMANCE</div>
         </div>
-
-        {/* About link on mid-bottom right */}
-        <div
-          style={{
-            position: "absolute",
-            bottom: "100px",
-            right: "60px",
-            zIndex: 5,
-          }}
-        >
-          <Link
-            href="/about"
-            style={{ color: "#fff", fontSize: "16px", fontWeight: 500 }}
-          >
-            About Dr. Abbott →
-          </Link>
-        </div>
-      </section>
-    </main>
-  );
-}
