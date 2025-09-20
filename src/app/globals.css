@@ -1,59 +1,100 @@
 .hero {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* full viewport */
   overflow: hidden;
-  background: black; /* fills gaps if image doesn't cover */
 }
 
-/* Left vertical block */
-.left-block {
+/* Navbar top-right */
+.navbar {
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  min-width: 300px;         /* prevents smushing */
-  max-width: 400px;         /* responsive cap */
-  background: rgba(0,0,0,0.8);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 40px;
+  top: 20px;
+  right: 40px;
+  z-index: 20;
+}
+
+.dropbtn {
+  background: none;
+  border: none;
   color: white;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.left-block h1 {
-  font-size: clamp(42px, 4vw, 80px);
-  font-weight: 800;
-  text-transform: uppercase;
-  line-height: 1.1;
-  white-space: normal;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.left-block p {
-  margin-top: 24px;
-  font-size: clamp(18px, 2vw, 28px);
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-/* Bottom-right block */
-.bottom-block {
+.dropdown-content {
+  display: none;
   position: absolute;
-  bottom: 0;
   right: 0;
-  background: rgba(0,0,0,0.8);
-  padding: 20px 40px;
+  background: rgba(0, 0, 0, 0.9);
+  min-width: 180px;
+  z-index: 30;
 }
 
-.bottom-block a {
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+}
+
+.dropdown-content a:hover {
+  background: #444;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Overlay text blocks */
+.overlay {
+  position: absolute;
+  color: white;
+  z-index: 10;
+}
+
+.overlay.left {
+  top: 20%;
+  left: 60px;
+}
+
+.overlay.left h1 {
+  font-size: clamp(48px, 6vw, 96px);
+  font-weight: 800;
+  margin: 0;
+}
+
+.overlay.left h2 {
+  font-size: clamp(28px, 3vw, 48px);
+  font-weight: 600;
+  margin: 0;
+}
+
+.overlay.left p {
+  margin-top: 20px;
+  font-size: clamp(16px, 2vw, 28px);
+  letter-spacing: 2px;
+  font-weight: 400;
+}
+
+.overlay.bottom-right {
+  bottom: 40px;
+  right: 60px;
+}
+
+.overlay.bottom-right a {
   font-size: 18px;
   font-weight: 500;
   color: white;
   text-decoration: none;
 }
 
-.bottom-block a:hover {
+.overlay.bottom-right a:hover {
   text-decoration: underline;
 }
