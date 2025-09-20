@@ -1,86 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Montserrat:wght@400;600;700;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
+/* Global font + reset */
+html,
+body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  background-color: #000; /* black background */
+  color: #fff; /* white text */
+  line-height: 1.6;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: black;
-  color: white;
-  overflow-x: hidden;
+/* Headings */
+h1 {
+  font-size: 2.75rem; /* ~44px */
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
 }
 
+h2 {
+  font-size: 1.75rem; /* ~28px */
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+h3 {
+  font-size: 1.25rem; /* ~20px */
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  color: #e5e5e5; /* softer white for readability */
+  margin-bottom: 1rem;
+}
+
+/* Links */
 a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease, border-bottom 0.2s ease;
 }
 
-/* Title / Tagline styles just kept simple */
-.hero-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  letter-spacing: 1px;
-  line-height: 1.1;
-}
-
-.hero-tagline {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  letter-spacing: 2px;
-  margin-top: 1rem;
-  text-transform: uppercase;
-}
-
-/* Dropdown specific styles */
-nav .dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-nav .dropdown-label {
-  cursor: pointer;
-  color: white;
-}
-
-nav .dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  padding: 0.5rem;
-  border-radius: 4px;
-  min-width: 180px;
-  z-index: 100;
-}
-
-nav .dropdown-content a {
-  display: block;
-  padding: 0.25rem 0.5rem;
-  color: white;
-  text-decoration: none;
-  font-family: 'Inter', sans-serif;
-}
-
-nav .dropdown-content a:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-}
-
-nav .dropdown:hover .dropdown-content {
-  display: block;
-}
-
-/* About link bottom right override if needed */
-.about-link {
-  color: white !important;
-  text-decoration: none !important;
-}
-
-/* Other catch-all link resets */
 a:hover {
-  text-decoration: none;
+  color: #e5e5e5;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+/* Buttons (like consultation link) */
+button,
+a.inline-block {
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Images */
+img,
+.next-image {
+  border-radius: 0.75rem; /* rounded edges */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
 }
