@@ -38,10 +38,10 @@ export default function AboutPage() {
         <div className="dropdown-wrapper" style={{ position: "relative" }}>
           <span style={{ cursor: "pointer", fontWeight: "bold" }}>Services ▾</span>
           <div className="dropdown">
-            <Link href="/services/exercise">Exercise Programs</Link>
-            <Link href="/services/rehab">Rehab Programs</Link>
-            <Link href="/services/nutrition">Nutrition</Link>
-            <Link href="/services/concierge">Concierge Medicine</Link>
+            <Link href="/services/exercise"><a>Exercise Programs</a></Link>
+            <Link href="/services/rehab"><a>Rehab Programs</a></Link>
+            <Link href="/services/nutrition"><a>Nutrition</a></Link>
+            <Link href="/services/concierge"><a>Concierge Medicine</a></Link>
           </div>
         </div>
       </nav>
@@ -72,7 +72,7 @@ export default function AboutPage() {
           right: 0;
           background-color: black;
           padding: 0.5rem 0;
-          min-width: 200px;
+          min-width: 220px;
           z-index: 200;
         }
 
