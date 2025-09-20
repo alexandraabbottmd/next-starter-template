@@ -45,25 +45,23 @@ export default function HomePage() {
 
         {/* Navigation */}
         <nav
-          style={{
-            position: "absolute",
-            top: "5%",
-            right: "5%",
-            zIndex: 20,
-            fontFamily: "sans-serif",
-            fontWeight: "bold",
-          }}
-        >
-          <div className="dropdown">
-            <span className="dropdown-label">Services ▾</span>
-            <div className="dropdown-content">
-              <Link href="/services/exercise">Exercise Programs</Link>
-              <Link href="/services/rehab">Rehab Programs</Link>
-              <Link href="/services/nutrition">Nutrition</Link>
-              <Link href="/services/concierge">Concierge Medicine</Link>
-            </div>
-          </div>
-        </nav>
+  style={{
+    position: "absolute",
+    top: "5%",
+    right: "5%",
+    zIndex: 20,
+  }}
+>
+  <div className="dropdown">
+    <span className="dropdown-label">Services ▾</span>
+    <div className="dropdown-content">
+      <Link href="/services/exercise">Exercise Programs</Link>
+      <Link href="/services/rehab">Rehab Programs</Link>
+      <Link href="/services/nutrition">Nutrition</Link>
+      <Link href="/services/concierge">Concierge Medicine</Link>
+    </div>
+  </div>
+</nav>
 
         {/* About link */}
         <Link
