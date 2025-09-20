@@ -5,14 +5,13 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <main style={{ margin: 0, padding: 0, overflow: "hidden" }}>
-      {/* Hero Section */}
       <section
         style={{
           position: "relative",
           width: "100%",
           height: "100vh",
-          backgroundImage: "url('/hero.jpg')",
-          backgroundSize: "contain",
+          backgroundImage: "url('/hero.jpg')", // ✅ force hero.jpg only
+          backgroundSize: "contain",           // ✅ no stretching
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundColor: "black",
@@ -34,7 +33,7 @@ export default function HomePage() {
           <p className="hero-tagline">SCIENCE IN EVERY REP</p>
         </div>
 
-        {/* Nav (top right) */}
+        {/* Nav */}
         <nav
           style={{
             position: "absolute",
@@ -53,7 +52,7 @@ export default function HomePage() {
           </div>
         </nav>
 
-        {/* About link (bottom right) */}
+        {/* About link */}
         <a
           href="/about"
           className="about-link"
