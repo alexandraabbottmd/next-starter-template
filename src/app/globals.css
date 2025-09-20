@@ -22,14 +22,27 @@ html, body {
   overflow: hidden;
 }
 
-/* Navbar */
-header nav ul {
-  list-style: none;
+/* --- Navbar --- */
+.nav-container {
+  position: absolute;
+  top: 40px;    /* fixed spacing from top */
+  right: 60px;  /* fixed spacing from right */
+  z-index: 5;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
-header nav a {
-  color: #fff;
-  text-decoration: none;
+.nav-container ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-container span {
+  cursor: pointer;
+  user-select: none;
 }
 
 /* Dropdown */
@@ -61,6 +74,7 @@ nav .dropdown a {
   padding: 8px 16px;
   font-size: 14px;
   color: #fff;
+  text-decoration: none;
 }
 
 nav .dropdown a:hover {
