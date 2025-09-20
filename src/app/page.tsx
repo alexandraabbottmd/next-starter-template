@@ -32,7 +32,7 @@ export default function HomePage() {
           style={{
             objectFit: "cover",
             objectPosition: "center",
-            filter: "contrast(0.9) brightness(0.9) blur(1px)", // softened image
+            filter: "contrast(0.9) brightness(0.9) blur(1px)", // softened look
           }}
         />
 
@@ -60,7 +60,6 @@ export default function HomePage() {
                 position: "relative",
               }}
             >
-              {/* Dropdown for Services */}
               <li
                 className={servicesOpen ? "open" : ""}
                 style={{ position: "relative" }}
@@ -72,68 +71,52 @@ export default function HomePage() {
                   Services ▾
                 </span>
                 <ul className="dropdown">
-                  <li>
-                    <Link href="/services/exercise">Exercise</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/rehab">Rehab</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/nutrition">Nutrition</Link>
-                  </li>
-                  <li>
-                    <Link href="/services/concierge">Concierge</Link>
-                  </li>
+                  <li><Link href="/services/exercise">Exercise</Link></li>
+                  <li><Link href="/services/rehab">Rehab</Link></li>
+                  <li><Link href="/services/nutrition">Nutrition</Link></li>
+                  <li><Link href="/services/concierge">Concierge</Link></li>
                 </ul>
               </li>
             </ul>
           </nav>
         </header>
 
-        {/* Big title on bottom-left */}
-        <div className="logo-title">
-          <div className="line1">ABBOTT</div>
-          <div className="line2">SPORT PERFORMANCE</div>
+        {/* Title closer to middle-left */}
+        <div
+          style={{
+            position: "absolute",
+            top: "35%", // raise title higher into negative space
+            left: "60px",
+            zIndex: 5,
+            color: "#fff",
+            lineHeight: 1.1,
+          }}
+        >
+          <div style={{ fontSize: "clamp(64px,8vw,96px)", fontWeight: 800 }}>
+            ABBOTT
+          </div>
+          <div style={{ fontSize: "clamp(32px,4vw,48px)", fontWeight: 600 }}>
+            SPORT PERFORMANCE
+          </div>
         </div>
 
-        /* Dropdown container */
-nav li {
-  position: relative;
-}
-
-/* Dropdown hidden by default */
-nav .dropdown {
-  display: none;
-  position: absolute;
-  right: 0;
-  margin-top: 8px;
-  background: rgba(0, 0, 0, 0.95);
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 8px 0;
-  list-style: none;
-  min-width: 200px;
-  z-index: 10;
-}
-
-/* Show on hover (desktop) */
-nav li:hover > .dropdown {
-  display: block;
-}
-
-/* Show when React adds "open" (mobile click) */
-nav li.open > .dropdown {
-  display: block;
-}
-
-/* Dropdown links */
-nav .dropdown a {
-  display: block;
-  padding: 8px 16px;
-  font-size: 14px;
-  color: #fff;
-}
-
-nav .dropdown a:hover {
-  background: rgba(255, 255, 255, 0.1);
+        {/* About link mid-right instead of bottom */}
+        <div
+          style={{
+            position: "absolute",
+            top: "45%",
+            right: "60px",
+            zIndex: 5,
+          }}
+        >
+          <Link
+            href="/about"
+            style={{ color: "#fff", fontSize: "18px", fontWeight: 500 }}
+          >
+            About Dr. Abbott →
+          </Link>
+        </div>
+      </section>
+    </main>
+  );
 }
