@@ -1,3 +1,6 @@
+"use client"; // enable React hooks on this page
+
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -7,6 +10,8 @@ export const metadata = {
 };
 
 export default function HomePage() {
+  const [servicesOpen, setServicesOpen] = useState(false);
+
   return (
     <main style={{ margin: 0, padding: 0, overflow: "hidden" }}>
       <section
@@ -18,7 +23,7 @@ export default function HomePage() {
         }}
         className="hero"
       >
-        {/* Background image with softening */}
+        {/* Background image */}
         <Image
           src="/hero.jpg"
           alt="Athlete training"
@@ -27,7 +32,7 @@ export default function HomePage() {
           style={{
             objectFit: "cover",
             objectPosition: "center",
-            filter: "contrast(0.9) brightness(0.9) blur(1px)", // softens image
+            filter: "contrast(0.9) brightness(0.9) blur(1px)", // soften image
           }}
         />
 
@@ -56,40 +61,46 @@ export default function HomePage() {
               }}
             >
               {/* Dropdown for Services */}
-              <li style={{ position: "relative" }}>
-                <span style={{ cursor: "pointer" }}>Services ▾</span>
-                <ul
-                  className="dropdown"
-                  style={{
-                    display: "none",
-                    position: "absolute",
-                    right: 0,
-                    marginTop: "8px",
-                    background: "rgba(0,0,0,0.9)",
-                    border: "1px solid #333",
-                    borderRadius: "8px",
-                    padding: "8px 0",
-                    listStyle: "none",
-                    minWidth: "200px",
-                  }}
+              <li
+                className={servicesOpen ? "open" : ""}
+                style={{ position: "relative" }}
+              >
+                <span
+                  onClick={() => setServicesOpen(!servicesOpen)}
+                  style={{ cursor: "pointer", userSelect: "none" }}
                 >
+                  Services ▾
+                </span>
+                <ul className="dropdown">
                   <li>
-                    <Link href="/services/exercise" style={{ display: "block", padding: "8px 16px", color: "#fff" }}>
+                    <Link
+                      href="/services/exercise"
+                      style={{ display: "block", padding: "8px 16px", color: "#fff" }}
+                    >
                       Exercise
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services/rehab" style={{ display: "block", padding: "8px 16px", color: "#fff" }}>
+                    <Link
+                      href="/services/rehab"
+                      style={{ display: "block", padding: "8px 16px", color: "#fff" }}
+                    >
                       Rehab
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services/nutrition" style={{ display: "block", padding: "8px 16px", color: "#fff" }}>
+                    <Link
+                      href="/services/nutrition"
+                      style={{ display: "block", padding: "8px 16px", color: "#fff" }}
+                    >
                       Nutrition
                     </Link>
                   </li>
                   <li>
-                    <Link href="/services/concierge" style={{ display: "block", padding: "8px 16px", color: "#fff" }}>
+                    <Link
+                      href="/services/concierge"
+                      style={{ display: "block", padding: "8px 16px", color: "#fff" }}
+                    >
                       Concierge
                     </Link>
                   </li>
@@ -127,7 +138,10 @@ export default function HomePage() {
             zIndex: 5,
           }}
         >
-          <Link href="/about" style={{ color: "#fff", fontSize: "16px", fontWeight: 500 }}>
+          <Link
+            href="/about"
+            style={{ color: "#fff", fontSize: "16px", fontWeight: 500 }}
+          >
             About Dr. Abbott →
           </Link>
         </div>
