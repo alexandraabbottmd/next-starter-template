@@ -76,7 +76,7 @@ export default function HomePage() {
             fontFamily: "sans-serif",
           }}
         >
-          About Dr. Abbott →
+          About Dr. Abbott
         </Link>
       </section>
     </main>
