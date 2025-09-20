@@ -1,92 +1,52 @@
-body, html {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Montserrat:wght@400;600;700;900&display=swap');
+
+* {
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
+  box-sizing: border-box;
+}
+
+body {
   font-family: 'Inter', sans-serif;
   background-color: black;
-}
-
-.hero {
-  position: relative;
-  height: 100vh;
-  width: 100%;
-  background: url("/hero.jpg") center center no-repeat;
-  background-size: contain; /* keeps proportions */
-  background-color: black;
-}
-
-.overlay {
-  position: absolute;
-  top: 25%;
-  left: 5%;
   color: white;
+  overflow-x: hidden;
 }
 
-.title {
-  font-size: 4rem;
-  font-weight: 700;
-  margin: 0;
+/* Title (bold, athletic) */
+.hero-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: 1px;
+  line-height: 1.1;
 }
 
-.subtitle {
-  font-size: 3rem;
-  font-weight: 600;
-  margin: 0.2em 0;
-}
-
-.tagline {
-  font-size: 1.5rem;
+/* Tagline (sleek, modern) */
+.hero-tagline {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   letter-spacing: 2px;
-  margin-top: 0.5em;
+  margin-top: 1rem;
+  text-transform: uppercase;
 }
 
+/* About link */
 .about-link {
-  position: absolute;
-  bottom: 10%;
-  right: 5%;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
   font-size: 1rem;
-}
-
-.nav {
-  position: absolute;
-  top: 2%;
-  right: 5%;
-}
-
-.dropbtn {
-  background: transparent;
-  color: white;
-  font-size: 1rem;
-  border: none;
-  cursor: pointer;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background-color: black;
-  min-width: 160px;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 8px 12px;
   text-decoration: none;
-  display: block;
+  color: white;
+  transition: opacity 0.3s;
+}
+.about-link:hover {
+  opacity: 0.7;
 }
 
-.dropdown-content a:hover {
-  background-color: #333;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
+/* Nav */
+nav {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
 }
