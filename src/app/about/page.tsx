@@ -5,118 +5,115 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <main className="bg-black text-white font-sans">
-      {/* Page container */}
-      <div className="max-w-5xl mx-auto px-6 py-16 space-y-20">
-        
-        {/* Header */}
-        <section className="text-center space-y-6">
-          <h1 className="text-4xl md:text-5xl font-bold">Dr. Abbott</h1>
-          <div className="flex flex-col md:flex-row items-center md:items-start md:space-x-8">
-            <Image
-              src="/about/profile.jpg" // replace with your headshot file path
-              alt="Dr. Alexandra Abbott"
-              width={250}
-              height={250}
-              className="rounded-xl shadow-lg"
-            />
-            <p className="text-lg max-w-xl mt-6 md:mt-0">
-              Alexandra Abbott, MD is a board-certified sports medicine
-              physician. Her expertise comes from years of education, training,
-              and experience.
-            </p>
-          </div>
-        </section>
+    <main style={{ backgroundColor: "black", color: "white", padding: "2rem" }}>
+      <section style={{ maxWidth: "1200px", margin: "0 auto" }}>
+        {/* Title + Headshot */}
+        <h1 style={{ textAlign: "center", marginBottom: "1rem" }}>Dr Abbott</h1>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "2rem",
+            marginBottom: "3rem",
+          }}
+        >
+          <Image
+            src="/about/headshotcolor.jpg"
+            alt="Dr Abbott headshot"
+            width={200}
+            height={260}
+            style={{ borderRadius: "12px", boxShadow: "0 4px 10px rgba(0,0,0,0.6)" }}
+          />
+          <p style={{ maxWidth: "500px", lineHeight: "1.6" }}>
+            Alexandra Abbott, MD is a board-certified sports medicine physician.
+          </p>
+        </div>
 
         {/* Collegiate athlete */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-6">Collegiate athlete</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Image
-              src="/about/athlete1.jpg"
-              alt="Collegiate athlete"
-              width={400}
-              height={300}
-              className="rounded-xl shadow-md"
-            />
-            <Image
-              src="/about/athlete2.jpg"
-              alt="Collegiate athlete"
-              width={400}
-              height={300}
-              className="rounded-xl shadow-md"
-            />
-          </div>
-        </section>
+        <h2>Collegiate athlete</h2>
+        <div style={{ display: "flex", gap: "1.5rem", marginBottom: "3rem" }}>
+          <Image
+            src="/about/action.jpg"
+            alt="Action soccer"
+            width={300}
+            height={200}
+            style={{ borderRadius: "12px" }}
+          />
+          <Image
+            src="/about/action2.jpg"
+            alt="Action soccer 2"
+            width={300}
+            height={200}
+            style={{ borderRadius: "12px" }}
+          />
+        </div>
 
-        {/* Research + publications */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-6">Research & Publications</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-6">
-            <Image src="/about/research1.jpg" alt="Research" width={300} height={200} className="rounded-lg shadow" />
-            <Image src="/about/research2.jpg" alt="Research" width={300} height={200} className="rounded-lg shadow" />
-            <Image src="/about/research3.jpg" alt="Research" width={300} height={200} className="rounded-lg shadow" />
-            <Image src="/about/research4.jpg" alt="Research" width={300} height={200} className="rounded-lg shadow" />
-          </div>
-          <p>
-            Prolific research in sports medicine, orthopedics, and pediatrics.{" "}
-            <Link
-              href="https://pubmed.ncbi.nlm.nih.gov/?term=Abbott+A&cauthor_id=35253062"
-              target="_blank"
-              className="underline hover:text-gray-300"
-            >
-              Dr. Abbott’s work
-            </Link>
-          </p>
-        </section>
+        {/* Kinesiology + Research */}
+        <h2>Kinesiology with emphasis in Exercise Science</h2>
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "1.5rem", marginBottom: "3rem" }}>
+          <Image src="/about/kinesiology1.jpg" alt="Chart" width={250} height={180} style={{ borderRadius: "12px" }} />
+          <Image src="/about/kinesiology2.jpg" alt="Data" width={250} height={180} style={{ borderRadius: "12px" }} />
+          <Image src="/about/kinesiology3.jpg" alt="Building" width={250} height={180} style={{ borderRadius: "12px" }} />
+          <Image src="/about/kinesiology4.jpg" alt="Graph" width={250} height={180} style={{ borderRadius: "12px" }} />
+        </div>
+        <h3>Prolific research in sports medicine, orthopedics, and pediatrics</h3>
+        <div style={{ display: "flex", alignItems: "center", gap: "1.5rem", marginBottom: "3rem" }}>
+          <Image
+            src="/about/researcher.jpg"
+            alt="Researcher"
+            width={200}
+            height={240}
+            style={{ borderRadius: "12px" }}
+          />
+          <Link
+            href="https://pubmed.ncbi.nlm.nih.gov/?term=Abbott+A&cauthor_id=35253062"
+            target="_blank"
+            style={{ color: "#4da6ff", textDecoration: "underline" }}
+          >
+            Dr Abbott’s publications (PubMed)
+          </Link>
+        </div>
 
         {/* Athletes cared for */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-6">Thousands of athletes cared for</h2>
-          <p className="mb-6">Including NCAA Division I, NBA, MLB athletes.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Image src="/about/rosebowl.jpg" alt="Rose Bowl" width={400} height={300} className="rounded-xl shadow-md" />
-            <Image src="/about/ucla.jpg" alt="UCLA" width={400} height={300} className="rounded-xl shadow-md" />
-            <Image src="/about/mlb.jpg" alt="MLB" width={400} height={300} className="rounded-xl shadow-md" />
-          </div>
-          <p className="mt-4 text-sm">
-            She currently practices at{" "}
-            <Link
-              href="https://www.stanfordchildrens.org/en/doctor/d-alexandra-morgan-abbott.html"
-              target="_blank"
-              className="underline hover:text-gray-300"
-            >
-              Stanford Children’s
-            </Link>
-            .
-          </p>
-        </section>
+        <h2>Thousands of athletes cared for, including NCAA Division I, NBA, MLB athletes</h2>
+        <div style={{ display: "flex", gap: "1.5rem", marginBottom: "3rem" }}>
+          <Image src="/about/NCAA.jpg" alt="NCAA" width={250} height={180} style={{ borderRadius: "12px" }} />
+          <Image src="/about/NBA.jpg" alt="NBA" width={250} height={180} style={{ borderRadius: "12px" }} />
+          <Image src="/about/MLB.jpg" alt="MLB" width={250} height={180} style={{ borderRadius: "12px" }} />
+        </div>
+        <p>
+          She currently practices at Stanford Children’s —{" "}
+          <Link
+            href="https://www.stanfordchildrens.org/en/doctor/alexandra-morgan-abbott.html"
+            target="_blank"
+            style={{ color: "#4da6ff", textDecoration: "underline" }}
+          >
+            Dr Abbott’s Stanford profile
+          </Link>
+        </p>
 
-        {/* Passion & wellness */}
-        <section>
-          <h2 className="text-2xl font-semibold mb-6">
-            Lifelong passion and dedication to health, wellness, and physical fitness
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Image src="/about/training1.jpg" alt="Training" width={400} height={300} className="rounded-xl shadow-md" />
-            <Image src="/about/training2.jpg" alt="Training" width={400} height={300} className="rounded-xl shadow-md" />
-          </div>
-        </section>
+        {/* Lifelong passion */}
+        <h2>Lifelong passion and dedication to health, wellness, and physical fitness</h2>
+        <div style={{ display: "flex", gap: "1.5rem", marginBottom: "3rem" }}>
+          <Image src="/about/snatch.jpg" alt="Snatch" width={250} height={300} style={{ borderRadius: "12px" }} />
+          <Image src="/about/yoga.jpg" alt="Yoga" width={250} height={300} style={{ borderRadius: "12px" }} />
+        </div>
 
         {/* Closing */}
-        <section className="text-center space-y-6">
-          <p className="text-lg max-w-2xl mx-auto">
-            As a primary care physician <span className="italic">who has done the reps herself</span>, Dr. Abbott applies cutting-edge research in sports performance, injury prevention and treatment, nutrition, and more to help you turn the corner and reach your full potential.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block px-6 py-3 bg-white text-black rounded-lg font-semibold hover:bg-gray-200"
-          >
-            Ask Dr. Abbott → Consultation Form
-          </Link>
-        </section>
+        <p style={{ maxWidth: "600px", marginBottom: "2rem" }}>
+          As a primary care physician <em>who has done the reps herself</em>, Dr Abbott applies cutting edge research in
+          sports performance, injury prevention and treatment, nutrition, and more to help you turn the corner and reach
+          your full potential.
+        </p>
 
-      </div>
+        <div style={{ display: "flex", alignItems: "center", gap: "1.5rem" }}>
+          <Image src="/about/ask dr abbott.jpg" alt="Ask Dr Abbott" width={250} height={280} style={{ borderRadius: "12px" }} />
+          <Link href="/contact" style={{ color: "#4da6ff", fontWeight: "bold" }}>
+            Ask Dr Abbott → link to consultation form
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }
