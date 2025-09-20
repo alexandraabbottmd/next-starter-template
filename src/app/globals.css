@@ -1,52 +1,51 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&family=Montserrat:wght@400;600;700;900&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: black;
+/* Reset link styles */
+a {
   color: white;
-  overflow-x: hidden;
-}
-
-/* Title (bold, athletic) */
-.hero-title {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  letter-spacing: 1px;
-  line-height: 1.1;
-}
-
-/* Tagline (sleek, modern) */
-.hero-tagline {
-  font-family: 'Inter', sans-serif;
-  font-weight: 400;
-  font-size: clamp(1rem, 2vw, 1.5rem);
-  letter-spacing: 2px;
-  margin-top: 1rem;
-  text-transform: uppercase;
-}
-
-/* About link */
-.about-link {
-  font-family: 'Inter', sans-serif;
-  font-weight: 500;
-  font-size: 1rem;
   text-decoration: none;
-  color: white;
-  transition: opacity 0.3s;
-}
-.about-link:hover {
-  opacity: 0.7;
 }
 
-/* Nav */
-nav {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
+a:hover {
+  text-decoration: underline;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: white;
+}
+
+/* Dropdown label */
+.dropdown-label {
+  cursor: pointer;
+  color: white;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 0.5rem;
+  border-radius: 4px;
+  min-width: 180px;
+}
+
+/* Links inside dropdown */
+.dropdown-content a {
+  display: block;
+  padding: 0.25rem 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
