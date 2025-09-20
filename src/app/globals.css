@@ -104,3 +104,17 @@ a:focus {
   background: rgba(0,0,0,0.6);
   color: var(--ink);
 }
+/* Dropdown hover */
+nav li:hover > .dropdown {
+  display: block;
+}
+
+nav .dropdown a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav .dropdown a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
