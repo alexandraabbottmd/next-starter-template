@@ -5,16 +5,14 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <main className="hero">
-      {/* Background image (change path to your real hero photo in /public) */}
       <Image
-        src="/home/hero.jpg"   // 👈 replace with your actual hero image filename
-        alt="Abbott Athletes"
+        src="/hero.jpg"   // Make sure this file is there
+        alt="Abbott Athletes Hero"
         fill
         priority
         className="hero-bg"
       />
 
-      {/* Navbar */}
       <div className="nav">
         <div className="dropdown">
           <button className="dropbtn">Services ▾</button>
@@ -27,17 +25,11 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Hero text */}
       <div className="hero-text">
-        <h1>
-          ABBOTT
-          <br />
-          SPORT PERFORMANCE
-        </h1>
-        <div className="tagline">SCIENCE IN EVERY REP</div>
+        <h1>ABBOTT<br/>SPORT PERFORMANCE</h1>
+        <p className="tagline">SCIENCE IN EVERY REP</p>
       </div>
 
-      {/* About link */}
       <div className="about-link">
         <Link href="/about">About Dr. Abbott →</Link>
       </div>
