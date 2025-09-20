@@ -10,7 +10,7 @@ export default function AboutPage() {
       <nav className="flex justify-between items-center px-8 py-6 fixed top-0 left-0 right-0 bg-black z-50">
         <Link
           href="/"
-          className="text-lg font-bold tracking-wide hover:opacity-80"
+          className="text-base font-bold tracking-wide hover:opacity-80"
         >
           ABBOTT SPORT PERFORMANCE
         </Link>
@@ -30,28 +30,30 @@ export default function AboutPage() {
       </nav>
 
       {/* INTRO */}
-      <section className="pt-32 text-center">
+      <section className="pt-32 text-center max-w-3xl mx-auto">
         <h1 className="text-5xl font-bold mb-8">Dr Abbott</h1>
-        <div className="mx-auto w-[280px] h-[360px] relative rounded-xl overflow-hidden">
+
+        <div className="relative mx-auto w-[280px] h-[360px] rounded-xl overflow-hidden">
           <Image
             src="/about/headshotcolor.jpg"
             alt="Dr Abbott"
             fill
             className="object-cover rounded-xl"
           />
-          {/* subtle fade edges */}
+          {/* gradient fade edges */}
           <div
             className="absolute inset-0 pointer-events-none"
             style={{
               WebkitMaskImage:
-                "radial-gradient(circle at center, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)",
+                "radial-gradient(circle, rgba(0,0,0,1) 80%, rgba(0,0,0,0) 100%)",
               WebkitMaskRepeat: "no-repeat",
               WebkitMaskSize: "cover",
               backgroundColor: "black",
             }}
           />
         </div>
-        <p className="mt-6 text-lg">
+
+        <p className="mt-6 text-lg leading-snug">
           Alexandra Abbott, MD is a <br />
           board-certified sports medicine physician.
         </p>
@@ -62,12 +64,12 @@ export default function AboutPage() {
         Her expertise comes from years of education, training, and experience:
       </p>
 
-      {/* COLLEGIATE */}
+      {/* COLLEGIATE ATHLETE */}
       <section className="mt-12 text-center">
         <h2 className="text-2xl font-semibold mb-6">Collegiate Athlete</h2>
         <div className="flex justify-center gap-6 flex-wrap">
-          <Image src="/about/action.jpg" alt="Action" width={280} height={200} className="rounded-lg object-cover" />
-          <Image src="/about/action2.jpg" alt="Action 2" width={280} height={200} className="rounded-lg object-cover" />
+          <Image src="/about/action.jpg" alt="Action" width={280} height={200} className="rounded-lg object-contain" />
+          <Image src="/about/action2.jpg" alt="Action 2" width={280} height={200} className="rounded-lg object-contain" />
         </div>
       </section>
 
