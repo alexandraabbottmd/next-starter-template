@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export const metadata = {
   title: "Abbott Sport Performance",
-  description: "Science in every rep — physician-designed, evidence-based training and rehab.",
+  description: "Physician-designed, evidence-based training and rehab.",
 };
 
 export default function HomePage() {
@@ -19,7 +19,7 @@ export default function HomePage() {
           overflow: "hidden",
         }}
       >
-        {/* Background image */}
+        {/* Background image only */}
         <Image
           src="/hero.jpg" // put your hero image in /public/hero.jpg
           alt="Athlete training"
@@ -28,13 +28,97 @@ export default function HomePage() {
           style={{
             objectFit: "cover",
             objectPosition: "center",
-            opacity: 0.9,
+            opacity: 1,
           }}
         />
 
-        {/* Overlay content */}
+        {/* Overlay nav bar */}
         <div
           style={{
-            position: "relative",
-            zIndex: 2,
-            display: "f
+            position: "absolute",
+            top: 0,
+            left: 0,
+            right: 0,
+            zIndex: 5,
+            padding: "24px",
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "flex-start",
+            color: "#fff",
+            fontWeight: 600,
+            fontSize: "14px",
+            letterSpacing: "1px",
+          }}
+        >
+          {/* Logo / Name */}
+          <div style={{ lineHeight: 1.2 }}>
+            <div>ABBOTT</div>
+            <div>SPORT PERFORMANCE</div>
+          </div>
+
+          {/* Nav */}
+          <nav>
+            <ul
+              style={{
+                display: "flex",
+                listStyle: "none",
+                margin: 0,
+                padding: 0,
+                gap: "24px",
+                position: "relative",
+              }}
+            >
+              {/* Dropdown for Services */}
+              <li style={{ position: "relative" }}>
+                <span style={{ cursor: "pointer" }}>Services ▾</span>
+                <ul
+                  style={{
+                    display: "none",
+                    position: "absolute",
+                    right: 0,
+                    marginTop: "8px",
+                    background: "rgba(0,0,0,0.85)",
+                    border: "1px solid #333",
+                    borderRadius: "8px",
+                    padding: "8px 0",
+                    listStyle: "none",
+                    minWidth: "220px",
+                  }}
+                  className="dropdown"
+                >
+                  <li>
+                    <Link href="/services/exercise" style={{ display: "block", padding: "8px 16px" }}>
+                      Exercise Programs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/rehab" style={{ display: "block", padding: "8px 16px" }}>
+                      Rehab Programs
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/nutrition" style={{ display: "block", padding: "8px 16px" }}>
+                      Nutrition
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href="/services/concierge" style={{ display: "block", padding: "8px 16px" }}>
+                      Concierge Medicine
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+
+              <li>
+                <Link href="/cart">🛒 Cart</Link>
+              </li>
+              <li>
+                <Link href="/about">About</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </section>
+    </main>
+  );
+}
