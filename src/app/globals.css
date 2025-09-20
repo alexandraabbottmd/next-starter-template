@@ -109,3 +109,38 @@ html, body {
 .about-link:hover {
   text-decoration: underline;
 }
+
+/* Hero always covers, and no white edges */
+.hero {
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Title & tagline positioning override for consistency */
+.hero-title {
+  position: absolute !important;
+  top: 30% !important;
+  left: 5% !important;
+  margin: 0 !important;
+}
+
+/* Tagline */
+.hero-tagline {
+  position: absolute !important;
+  top: 42% !important;
+  left: 5% !important;
+  margin: 0 !important;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: clamp(20px,2vw,24px);
+}
+
+/* About link mid-right */
+.about-link {
+  position: absolute !important;
+  top: 45% !important;
+  right: 5% !important;
+  margin: 0 !important;
+  font-size: 16px !important;
+}
