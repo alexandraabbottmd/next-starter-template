@@ -1,53 +1,19 @@
-/* Reset browser defaults */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html, body {
-  height: 100%;
-  background: black;
-  color: white;
-  font-family: Arial, Helvetica, sans-serif;
-  overflow: hidden;
-}
-
-/* Hero section */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: black;
-  overflow: hidden;
-}
-
-/* Hero background image with letterboxing (no stretch) */
+/* Hero background */
 .hero-bg {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 100%;
   height: 100%;
-  object-fit: contain;      /* keep proportions */
+  object-fit: cover;        /* Fill screen, crop edges */
   object-position: center top;
   transform: translate(-50%, -50%);
   background: black;
 }
 
 /* Hero text */
-.hero-text {
-  position: absolute;
-  left: 5%;
-  top: 25%;
-  text-align: left;
-}
-
 .hero-text h1 {
-  font-size: 3.5rem;
+  font-size: clamp(2rem, 4vw, 4rem); /* responsive between 2rem and 4rem */
   font-weight: 800;
   line-height: 1.2;
   text-transform: uppercase;
@@ -55,73 +21,9 @@ html, body {
 }
 
 .hero-text .tagline {
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.5rem);
   margin-top: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: white;
-}
-
-/* About link */
-.about-link {
-  position: absolute;
-  right: 5%;
-  bottom: 5%;
-  font-size: 1rem;
-}
-
-.about-link a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.about-link a:hover {
-  text-decoration: underline;
-}
-
-/* Navbar */
-.nav {
-  position: absolute;
-  top: 5%;
-  right: 5%;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropbtn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  right: 0;
-  background: rgba(0, 0, 0, 0.9);
-  min-width: 200px;
-  text-align: left;
-  z-index: 1000;
-}
-
-.dropdown-content a {
-  color: white;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
