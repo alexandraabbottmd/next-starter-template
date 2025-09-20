@@ -8,32 +8,30 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main style={{ margin: 0, padding: 0 }}>
-      {/* Fullscreen hero */}
+    <main style={{ margin: 0, padding: 0, overflow: "hidden" }}>
       <section
         style={{
           position: "relative",
           height: "100vh",
-          width: "100%",
+          width: "100vw",
           backgroundColor: "#000",
           overflow: "hidden",
         }}
       >
-        {/* Background image only */}
+        {/* Full background image */}
         <Image
-          src="/hero.jpg" // put your hero image in /public/hero.jpg
+          src="/hero.jpg" // replace with your actual file in /public
           alt="Athlete training"
           fill
           priority
           style={{
             objectFit: "cover",
             objectPosition: "center",
-            opacity: 1,
           }}
         />
 
-        {/* Overlay nav bar */}
-        <div
+        {/* Overlay nav/header */}
+        <header
           style={{
             position: "absolute",
             top: 0,
@@ -50,7 +48,7 @@ export default function HomePage() {
             letterSpacing: "1px",
           }}
         >
-          {/* Logo / Name */}
+          {/* Logo / Title */}
           <div style={{ lineHeight: 1.2 }}>
             <div>ABBOTT</div>
             <div>SPORT PERFORMANCE</div>
@@ -72,6 +70,7 @@ export default function HomePage() {
               <li style={{ position: "relative" }}>
                 <span style={{ cursor: "pointer" }}>Services ▾</span>
                 <ul
+                  className="dropdown"
                   style={{
                     display: "none",
                     position: "absolute",
@@ -84,7 +83,6 @@ export default function HomePage() {
                     listStyle: "none",
                     minWidth: "220px",
                   }}
-                  className="dropdown"
                 >
                   <li>
                     <Link href="/services/exercise" style={{ display: "block", padding: "8px 16px" }}>
@@ -110,15 +108,4 @@ export default function HomePage() {
               </li>
 
               <li>
-                <Link href="/cart">🛒 Cart</Link>
-              </li>
-              <li>
-                <Link href="/about">About</Link>
-              </li>
-            </ul>
-          </nav>
-        </div>
-      </section>
-    </main>
-  );
-}
+                <
