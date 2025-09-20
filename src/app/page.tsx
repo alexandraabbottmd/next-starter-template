@@ -10,8 +10,8 @@ export default function HomePage() {
           position: "relative",
           width: "100%",
           height: "100vh",
-          backgroundImage: "url('/hero.jpg')", // ✅ CSS background works
-          backgroundSize: "contain",
+          backgroundImage: "url('/hero.jpg')", // ✅ Hero image
+          backgroundSize: "contain", // Keeps proportions
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundColor: "black",
@@ -27,8 +27,17 @@ export default function HomePage() {
             zIndex: 10,
           }}
         >
-          <h1 style={{ fontSize: "3rem", margin: 0 }}>ABBOTT<br />SPORT PERFORMANCE</h1>
-          <p style={{ marginTop: "1rem", fontSize: "1.2rem", letterSpacing: "2px" }}>
+          <h1 style={{ fontSize: "3rem", margin: 0, fontFamily: "sans-serif", fontWeight: "bold" }}>
+            ABBOTT <br /> SPORT PERFORMANCE
+          </h1>
+          <p
+            style={{
+              marginTop: "1rem",
+              fontSize: "1.2rem",
+              letterSpacing: "2px",
+              fontFamily: "sans-serif",
+            }}
+          >
             SCIENCE IN EVERY REP
           </p>
         </div>
@@ -40,6 +49,9 @@ export default function HomePage() {
             top: "5%",
             right: "5%",
             zIndex: 20,
+            color: "white",
+            fontFamily: "sans-serif",
+            fontWeight: "bold",
           }}
         >
           <div style={{ position: "relative", display: "inline-block" }}>
@@ -55,16 +67,16 @@ export default function HomePage() {
               }}
               className="dropdown-content"
             >
-              <Link href="/services/exercise" style={{ display: "block", color: "white", padding: "0.25rem 0" }}>Exercise Programs</Link>
-              <Link href="/services/rehab" style={{ display: "block", color: "white", padding: "0.25rem 0" }}>Rehab Programs</Link>
-              <Link href="/services/nutrition" style={{ display: "block", color: "white", padding: "0.25rem 0" }}>Nutrition</Link>
-              <Link href="/services/concierge" style={{ display: "block", color: "white", padding: "0.25rem 0" }}>Concierge Medicine</Link>
+              <Link href="/services/exercise" style={{ display: "block", color: "white", padding: "0.25rem 0", textDecoration: "none" }}>Exercise Programs</Link>
+              <Link href="/services/rehab" style={{ display: "block", color: "white", padding: "0.25rem 0", textDecoration: "none" }}>Rehab Programs</Link>
+              <Link href="/services/nutrition" style={{ display: "block", color: "white", padding: "0.25rem 0", textDecoration: "none" }}>Nutrition</Link>
+              <Link href="/services/concierge" style={{ display: "block", color: "white", padding: "0.25rem 0", textDecoration: "none" }}>Concierge Medicine</Link>
             </div>
           </div>
         </nav>
 
         {/* About link */}
-        <a
+        <Link
           href="/about"
           style={{
             position: "absolute",
@@ -73,11 +85,11 @@ export default function HomePage() {
             color: "white",
             textDecoration: "none",
             fontSize: "1.2rem",
-            zIndex: 10,
+            fontFamily: "sans-serif",
           }}
         >
           About Dr. Abbott →
-        </a>
+        </Link>
       </section>
     </main>
   );
