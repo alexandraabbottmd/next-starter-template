@@ -1,4 +1,4 @@
-/* Reset & base */
+/* Reset and base */
 * {
   margin: 0;
   padding: 0;
@@ -7,86 +7,105 @@
 
 html, body {
   height: 100%;
-  background: #000;
-  color: #fff;
-  font-family: 'Helvetica Neue', Arial, sans-serif; /* Uniform font across site */
-  line-height: 1.2;
-  letter-spacing: 0.5px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background: black;
+  color: white;
 }
 
-/* Link styles */
-a {
-  color: #fff;
-  text-decoration: none;
-  transition: color 0.2s ease;
+/* Hero background */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url('/hero.jpg') no-repeat center top;
+  background-size: cover;
+  overflow: hidden;
 }
 
-a:hover, a:focus {
-  color: #ddd;
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 2%;
+  right: 5%;
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
 }
 
-/* Dropdown behavior */
-nav li {
+.nav-right {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Dropdown */
+.dropdown {
   position: relative;
 }
 
-nav .dropdown {
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.dropdown-content {
   display: none;
   position: absolute;
   right: 0;
-  margin-top: 8px;
-  background: rgba(0,0,0,0.9);
-  border: 1px solid #333;
-  border-radius: 8px;
-  padding: 8px 0;
-  list-style: none;
+  background: rgba(0, 0, 0, 0.9);
   min-width: 200px;
   z-index: 10;
 }
 
-nav li:hover > .dropdown,
-nav li.open > .dropdown {
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.dropdown:hover .dropdown-content {
   display: block;
 }
 
-nav .dropdown a {
-  display: block;
-  padding: 8px 16px;
-  font-size: 14px;
-  color: #fff;
-}
-
-nav .dropdown a:hover {
-  background: rgba(255,255,255,0.1);
-}
-
-/* Logo / title big */
-.logo-title {
+/* Hero text */
+.hero-title {
   position: absolute;
-  bottom: 120px;
-  left: 60px;
-  z-index: 5;
+  top: 25%;
+  left: 5%;
+  font-size: clamp(2rem, 5vw, 4.5rem);
   font-weight: 800;
+  text-transform: uppercase;
   line-height: 1.1;
-  letter-spacing: 1px;
 }
 
-.logo-title .line1 {
-  font-size: clamp(48px, 8vw, 96px);
+.hero-tagline {
+  position: absolute;
+  top: 42%;
+  left: 5%;
+  font-size: clamp(1rem, 2vw, 2rem);
+  font-weight: 500;
+  text-transform: uppercase;
 }
 
-.logo-title .line2 {
-  font-size: clamp(28px, 4vw, 48px);
-  font-weight: 600;
-}
-
-/* About link style */
+/* About link */
 .about-link {
   position: absolute;
-  bottom: 100px;
-  right: 60px;
-  z-index: 5;
-  font-size: 16px;
+  bottom: 8%;
+  right: 5%;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
   font-weight: 500;
-  color: #fff;
+}
+
+.about-link:hover {
+  text-decoration: underline;
 }
