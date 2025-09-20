@@ -12,8 +12,14 @@ export default function HomePage() {
     <main style={{ margin: 0, padding: 0, overflow: "hidden" }}>
       <section
         className="hero"
-        style={{ height: "100vh", width: "100vw", position: "relative", overflow: "hidden" }}
+        style={{
+          height: "100vh",
+          width: "100vw",
+          position: "relative",
+          overflow: "hidden",
+        }}
       >
+        {/* Background image anchored cover */}
         <Image
           src="/hero.jpg"
           alt="Athlete training"
@@ -21,17 +27,20 @@ export default function HomePage() {
           priority
           style={{
             objectFit: "cover",
-            objectPosition: "center top",
-            filter: "contrast(0.9) brightness(0.9) blur(1px)",
+            objectPosition: "center top", // anchor from top center
           }}
         />
 
+        {/* Navigation */}
         <Nav />
 
+        {/* Title */}
         <h1 className="hero-title">ABBOTT<br />SPORT PERFORMANCE</h1>
 
+        {/* Tagline */}
         <p className="hero-tagline">SCIENCE IN EVERY REP</p>
 
+        {/* About link */}
         <Link href="/about" className="about-link">
           About Dr. Abbott →
         </Link>
