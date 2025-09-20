@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import "./globals.css"; // ✅ makes sure global styles apply
 
 export default function HomePage() {
   return (
@@ -10,8 +11,8 @@ export default function HomePage() {
           position: "relative",
           width: "100%",
           height: "100vh",
-          backgroundImage: "url('/hero.jpg')", // ✅ Hero image
-          backgroundSize: "contain", // Keeps proportions
+          backgroundImage: "url('/hero.jpg')",
+          backgroundSize: "contain",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",
           backgroundColor: "black",
@@ -49,28 +50,17 @@ export default function HomePage() {
             top: "5%",
             right: "5%",
             zIndex: 20,
-            color: "white",
             fontFamily: "sans-serif",
             fontWeight: "bold",
           }}
         >
-          <div style={{ position: "relative", display: "inline-block" }}>
-            <span style={{ cursor: "pointer", color: "white" }}>Services ▾</span>
-            <div
-              style={{
-                display: "none",
-                position: "absolute",
-                right: 0,
-                marginTop: "0.5rem",
-                backgroundColor: "rgba(0,0,0,0.85)",
-                padding: "0.5rem",
-              }}
-              className="dropdown-content"
-            >
-              <Link href="/services/exercise" style={{ display: "block", color: "white", padding: "0.25rem 0", textDecoration: "none" }}>Exercise Programs</Link>
-              <Link href="/services/rehab" style={{ display: "block", color: "white", padding: "0.25rem 0", textDecoration: "none" }}>Rehab Programs</Link>
-              <Link href="/services/nutrition" style={{ display: "block", color: "white", padding: "0.25rem 0", textDecoration: "none" }}>Nutrition</Link>
-              <Link href="/services/concierge" style={{ display: "block", color: "white", padding: "0.25rem 0", textDecoration: "none" }}>Concierge Medicine</Link>
+          <div className="dropdown">
+            <span className="dropdown-label">Services ▾</span>
+            <div className="dropdown-content">
+              <Link href="/services/exercise">Exercise Programs</Link>
+              <Link href="/services/rehab">Rehab Programs</Link>
+              <Link href="/services/nutrition">Nutrition</Link>
+              <Link href="/services/concierge">Concierge Medicine</Link>
             </div>
           </div>
         </nav>
