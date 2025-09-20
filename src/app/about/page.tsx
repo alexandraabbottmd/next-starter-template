@@ -16,7 +16,7 @@ export default function AboutPage() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "1rem 2rem",
+          padding: "1rem 3rem",
           zIndex: 100,
           backgroundColor: "rgba(0,0,0,0.6)",
         }}
@@ -27,11 +27,9 @@ export default function AboutPage() {
         </Link>
 
         {/* Right: Services Dropdown */}
-        <div style={{ position: "relative" }}>
-          <button
+        <div style={{ position: "relative" }} className="services-menu">
+          <span
             style={{
-              background: "none",
-              border: "none",
               color: "white",
               fontSize: "1rem",
               fontWeight: "bold",
@@ -39,7 +37,7 @@ export default function AboutPage() {
             }}
           >
             Services ▾
-          </button>
+          </span>
           <div
             style={{
               position: "absolute",
@@ -49,40 +47,31 @@ export default function AboutPage() {
               border: "1px solid #333",
               display: "none",
               flexDirection: "column",
+              minWidth: "200px",
             }}
             className="dropdown"
           >
-            <Link href="/services/exercise" style={{ padding: "0.5rem 1rem", textDecoration: "none", color: "white" }}>
+            <Link href="/services/exercise" style={{ padding: "0.75rem 1rem", textDecoration: "none", color: "white" }}>
               Exercise Programs
             </Link>
-            <Link href="/services/rehab" style={{ padding: "0.5rem 1rem", textDecoration: "none", color: "white" }}>
+            <Link href="/services/rehab" style={{ padding: "0.75rem 1rem", textDecoration: "none", color: "white" }}>
               Rehab Programs
             </Link>
-            <Link href="/services/nutrition" style={{ padding: "0.5rem 1rem", textDecoration: "none", color: "white" }}>
+            <Link href="/services/nutrition" style={{ padding: "0.75rem 1rem", textDecoration: "none", color: "white" }}>
               Nutrition
             </Link>
-            <Link href="/services/concierge" style={{ padding: "0.5rem 1rem", textDecoration: "none", color: "white" }}>
+            <Link href="/services/concierge" style={{ padding: "0.75rem 1rem", textDecoration: "none", color: "white" }}>
               Concierge Medicine
             </Link>
           </div>
         </div>
 
-        {/* Small dropdown toggle script */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              document.addEventListener('DOMContentLoaded', function() {
-                const btn = document.querySelector('nav button');
-                const menu = document.querySelector('nav .dropdown');
-                if (btn && menu) {
-                  btn.addEventListener('click', () => {
-                    menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-                  });
-                }
-              });
-            `,
-          }}
-        />
+        {/* Inline CSS for hover effect */}
+        <style>{`
+          .services-menu:hover .dropdown {
+            display: flex;
+          }
+        `}</style>
       </nav>
 
       {/* About Section */}
@@ -94,7 +83,6 @@ export default function AboutPage() {
             Alexandra Abbott, MD is a board-certified sports medicine physician.
           </p>
         </div>
-        {/* (keep the rest of your about page content here...) */}
       </section>
     </main>
   );
