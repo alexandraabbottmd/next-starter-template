@@ -1,84 +1,60 @@
-"use client";
+export const metadata = {
+  title: "About Dr. Abbott | Abbott Sport Performance",
+  description: "Meet Dr. Alexandra Abbott, sports medicine physician and founder of Abbott Sport Performance.",
+};
 
-import Link from "next/link";
-import "./globals.css"; // ✅ makes sure global styles apply
-
-export default function HomePage() {
+export default function AboutPage() {
   return (
-    <main style={{ margin: 0, padding: 0, overflow: "hidden", backgroundColor: "black" }}>
-      <section
-        style={{
-          position: "relative",
-          width: "100%",
-          height: "100vh",
-          backgroundImage: "url('/hero.jpg')",
-          backgroundSize: "contain",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-          backgroundColor: "black",
-        }}
-      >
-        {/* Title + Tagline */}
-        <div
-          style={{
-            position: "absolute",
-            top: "20%",
-            left: "5%",
-            color: "white",
-            zIndex: 10,
-          }}
-        >
-          <h1 style={{ fontSize: "3rem", margin: 0, fontFamily: "sans-serif", fontWeight: "bold" }}>
-            ABBOTT <br /> SPORT PERFORMANCE
-          </h1>
-          <p
-            style={{
-              marginTop: "1rem",
-              fontSize: "1.2rem",
-              letterSpacing: "2px",
-              fontFamily: "sans-serif",
-            }}
-          >
-            SCIENCE IN EVERY REP
-          </p>
-        </div>
+    <main
+      style={{
+        maxWidth: "900px",
+        margin: "0 auto",
+        padding: "4rem 2rem",
+        fontFamily: "sans-serif",
+        color: "white",
+        backgroundColor: "black",
+      }}
+    >
+      <h1 style={{ fontSize: "2.5rem", marginBottom: "1.5rem" }}>
+        About Dr. Abbott
+      </h1>
 
-        {/* Navigation */}
-        <nav
-  style={{
-    position: "absolute",
-    top: "5%",
-    right: "5%",
-    zIndex: 20,
-  }}
->
-  <div className="dropdown">
-    <span className="dropdown-label">Services ▾</span>
-    <div className="dropdown-content">
-      <Link href="/services/exercise">Exercise Programs</Link>
-      <Link href="/services/rehab">Rehab Programs</Link>
-      <Link href="/services/nutrition">Nutrition</Link>
-      <Link href="/services/concierge">Concierge Medicine</Link>
-    </div>
-  </div>
-</nav>
+      <p style={{ marginBottom: "1.5rem", lineHeight: "1.6" }}>
+        Dr. Alexandra Abbott is a board-certified pediatric sports medicine
+        physician dedicated to helping athletes of all levels recover from
+        injury, prevent future setbacks, and reach their peak performance.
+      </p>
 
-        {/* About link */}
-        <Link
-          href="/about"
+      <p style={{ marginBottom: "1.5rem", lineHeight: "1.6" }}>
+        Her approach combines evidence-based exercise prescription,
+        individualized rehab planning, and sports nutrition guidance. With a
+        concierge-style model, patients receive direct access to physician-led
+        expertise tailored to their unique goals.
+      </p>
+
+      <p style={{ marginBottom: "1.5rem", lineHeight: "1.6" }}>
+        Dr. Abbott’s philosophy: every athlete deserves care that is
+        comprehensive, ethical, and personalized. Whether you’re returning from
+        injury or looking to push performance boundaries, Abbott Sport
+        Performance provides the tools and guidance to help you succeed.
+      </p>
+
+      <div style={{ marginTop: "2.5rem" }}>
+        <a
+          href="/services/rehab"
           style={{
-            position: "absolute",
-            bottom: "5%",
-            right: "5%",
-            color: "white",
+            display: "inline-block",
+            padding: "0.75rem 1.5rem",
+            backgroundColor: "white",
+            color: "black",
+            borderRadius: "4px",
             textDecoration: "none",
-            fontSize: "1.2rem",
-            fontFamily: "sans-serif",
+            fontWeight: "bold",
           }}
         >
-          About Dr. Abbott →
-        </Link>
-      </section>
+          Explore Services →
+        </a>
+      </div>
     </main>
   );
 }
