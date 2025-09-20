@@ -2,10 +2,20 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Inter } from "next/font/google";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export default function AboutPage() {
   return (
-    <main style={{ backgroundColor: "black", color: "white", minHeight: "100vh" }}>
+    <main
+      style={{
+        backgroundColor: "black",
+        color: "white",
+        minHeight: "100vh",
+        fontFamily: inter.style.fontFamily,
+      }}
+    >
       {/* Top Navigation */}
       <nav
         style={{
@@ -21,7 +31,15 @@ export default function AboutPage() {
           zIndex: 50,
         }}
       >
-        <Link href="/" style={{ fontWeight: "bold", fontSize: "1.2rem", textDecoration: "none", color: "white" }}>
+        <Link
+          href="/"
+          style={{
+            fontWeight: "bold",
+            fontSize: "1.2rem",
+            textDecoration: "none",
+            color: "white",
+          }}
+        >
           ABBOTT SPORT PERFORMANCE
         </Link>
 
@@ -50,16 +68,16 @@ export default function AboutPage() {
               zIndex: 100,
             }}
           >
-            <Link href="/exercise" style={{ color: "white", textDecoration: "none", display: "block", margin: "0.5rem 0" }}>
+            <Link href="/exercise" style={{ display: "block", margin: "0.5rem 0", color: "white" }}>
               Exercise Programs
             </Link>
-            <Link href="/rehab" style={{ color: "white", textDecoration: "none", display: "block", margin: "0.5rem 0" }}>
+            <Link href="/rehab" style={{ display: "block", margin: "0.5rem 0", color: "white" }}>
               Rehab Programs
             </Link>
-            <Link href="/nutrition" style={{ color: "white", textDecoration: "none", display: "block", margin: "0.5rem 0" }}>
+            <Link href="/nutrition" style={{ display: "block", margin: "0.5rem 0", color: "white" }}>
               Nutrition
             </Link>
-            <Link href="/concierge" style={{ color: "white", textDecoration: "none", display: "block", margin: "0.5rem 0" }}>
+            <Link href="/concierge" style={{ display: "block", margin: "0.5rem 0", color: "white" }}>
               Concierge Medicine
             </Link>
           </div>
@@ -67,20 +85,36 @@ export default function AboutPage() {
       </nav>
 
       {/* Intro Section */}
-      <section style={{ paddingTop: "8rem", maxWidth: "800px", margin: "0 auto", textAlign: "center" }}>
-        <h1 style={{ fontSize: "2.5rem", marginBottom: "2rem" }}>Dr Abbott</h1>
+      <section
+        style={{
+          paddingTop: "8rem",
+          maxWidth: "700px",
+          margin: "0 auto",
+          textAlign: "center",
+        }}
+      >
+        <h1 style={{ fontSize: "3rem", fontWeight: "bold", marginBottom: "2rem" }}>
+          Dr Abbott
+        </h1>
 
-        <Image
-          src="/about/headshotcolor.jpg"
-          alt="Dr Abbott"
-          width={250}
-          height={300}
-          style={{ borderRadius: "15px", margin: "0 auto" }}
-        />
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
+          <Image
+            src="/about/headshotcolor.jpg"
+            alt="Dr Abbott"
+            width={0}
+            height={0}
+            sizes="100vw"
+            style={{
+              width: "250px",
+              height: "auto",
+              borderRadius: "15px",
+            }}
+          />
 
-        <p style={{ fontSize: "1.2rem", lineHeight: "1.6", marginTop: "1.5rem" }}>
-          Alexandra Abbott, MD is a board-certified sports medicine physician.
-        </p>
+          <p style={{ fontSize: "1.25rem", lineHeight: "1.8", marginTop: "1.5rem", maxWidth: "600px" }}>
+            Alexandra Abbott, MD is a board-certified sports medicine physician.
+          </p>
+        </div>
       </section>
 
       <style jsx>{`
