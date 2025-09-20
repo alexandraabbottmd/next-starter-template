@@ -1,4 +1,4 @@
-/* Reset and base */
+/* Reset & base */
 * {
   margin: 0;
   padding: 0;
@@ -23,124 +23,82 @@ html, body {
 }
 
 /* Navbar */
-.navbar {
-  position: absolute;
-  top: 2%;
-  right: 5%;
-  display: flex;
-  gap: 2rem;
-  font-size: 1rem;
+header nav ul {
+  list-style: none;
 }
 
-.nav-right {
-  display: flex;
-  gap: 1rem;
+header nav a {
+  color: #fff;
+  text-decoration: none;
 }
 
 /* Dropdown */
-.dropdown {
+nav li {
   position: relative;
 }
 
-.dropbtn {
-  background: none;
-  border: none;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.dropdown-content {
+nav .dropdown {
   display: none;
   position: absolute;
   right: 0;
-  background: rgba(0, 0, 0, 0.9);
+  margin-top: 8px;
+  background: rgba(0,0,0,0.95);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 8px 0;
+  list-style: none;
   min-width: 200px;
   z-index: 10;
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 10px;
-  color: white;
-  text-decoration: none;
-}
-
-.dropdown-content a:hover {
-  background: rgba(255, 255, 255, 0.1);
-}
-
-.dropdown:hover .dropdown-content {
+nav li:hover > .dropdown,
+nav li.open > .dropdown {
   display: block;
 }
 
-/* Hero text */
+nav .dropdown a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fff;
+}
+
+nav .dropdown a:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+/* --- Anchored hero text --- */
 .hero-title {
   position: absolute;
-  top: 25%;
-  left: 5%;
-  font-size: clamp(2rem, 5vw, 4.5rem);
+  top: 120px;     /* fixed from top */
+  left: 60px;     /* fixed from left */
+  font-size: clamp(48px, 6vw, 96px);
   font-weight: 800;
-  text-transform: uppercase;
   line-height: 1.1;
+  text-transform: uppercase;
 }
 
 .hero-tagline {
   position: absolute;
-  top: 42%;
-  left: 5%;
-  font-size: clamp(1rem, 2vw, 2rem);
+  top: 260px;     /* fixed offset below title */
+  left: 60px;
+  font-size: clamp(18px, 2vw, 28px);
   font-weight: 500;
+  letter-spacing: 3px;
   text-transform: uppercase;
 }
 
-/* About link */
+/* About link stays pinned bottom-right */
 .about-link {
   position: absolute;
-  bottom: 8%;
-  right: 5%;
-  font-size: 1rem;
-  color: white;
-  text-decoration: none;
+  bottom: 100px;
+  right: 60px;
+  font-size: 18px;
   font-weight: 500;
+  color: #fff;
+  text-decoration: none;
 }
 
 .about-link:hover {
   text-decoration: underline;
-}
-
-/* Hero always covers, and no white edges */
-.hero {
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-/* Title & tagline positioning override for consistency */
-.hero-title {
-  position: absolute !important;
-  top: 30% !important;
-  left: 5% !important;
-  margin: 0 !important;
-}
-
-/* Tagline */
-.hero-tagline {
-  position: absolute !important;
-  top: 42% !important;
-  left: 5% !important;
-  margin: 0 !important;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: clamp(20px,2vw,24px);
-}
-
-/* About link mid-right */
-.about-link {
-  position: absolute !important;
-  top: 45% !important;
-  right: 5% !important;
-  margin: 0 !important;
-  font-size: 16px !important;
 }
