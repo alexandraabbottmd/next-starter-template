@@ -5,22 +5,41 @@ import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <main className="bg-black text-white min-h-screen px-6 md:px-20">
+    <main className="bg-black text-white min-h-screen px-6 md:px-20 font-sans">
       {/* Header */}
       <header className="flex justify-between items-center py-6">
-        <Link href="/" className="text-lg font-bold tracking-wide hover:opacity-80">
+        <Link
+          href="/"
+          className="text-lg font-bold tracking-wide hover:opacity-80"
+        >
           ABBOTT SPORT PERFORMANCE
         </Link>
         <div className="relative group">
-          <button className="font-semibold">
+          <button className="font-semibold hover:opacity-80">
             Services <span className="ml-1">▼</span>
           </button>
-          <div className="absolute right-0 mt-2 hidden group-hover:block bg-black shadow-lg rounded">
-            <ul className="p-2 space-y-1">
-              <li><Link href="/exercise" className="hover:underline">Exercise Programs</Link></li>
-              <li><Link href="/rehab" className="hover:underline">Rehab Programs</Link></li>
-              <li><Link href="/nutrition" className="hover:underline">Nutrition</Link></li>
-              <li><Link href="/concierge" className="hover:underline">Concierge Medicine</Link></li>
+          <div className="absolute right-0 mt-2 hidden group-hover:block bg-black rounded shadow-lg">
+            <ul className="p-2 space-y-1 text-sm">
+              <li>
+                <Link href="/exercise" className="hover:underline">
+                  Exercise Programs
+                </Link>
+              </li>
+              <li>
+                <Link href="/rehab" className="hover:underline">
+                  Rehab Programs
+                </Link>
+              </li>
+              <li>
+                <Link href="/nutrition" className="hover:underline">
+                  Nutrition
+                </Link>
+              </li>
+              <li>
+                <Link href="/concierge" className="hover:underline">
+                  Concierge Medicine
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -28,20 +47,35 @@ export default function AboutPage() {
 
       {/* Intro */}
       <section className="text-center mt-10">
-        <h1 className="text-3xl font-bold mb-6">Dr Abbott</h1>
+        <h1 className="text-4xl font-extrabold mb-6">Dr Abbott</h1>
         <div className="flex flex-col items-center space-y-4">
-          <Image
-            src="/about/headshotcolor.jpg"
-            alt="Dr Abbott"
-            width={300}
-            height={400}
-            className="rounded-xl object-contain"
-          />
+          <div className="relative w-[300px] h-[400px]">
+            <Image
+              src="/about/headshotcolor.jpg"
+              alt="Dr Abbott"
+              fill
+              priority
+              className="object-contain rounded-xl"
+              style={{
+                WebkitMaskImage:
+                  "linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)",
+                WebkitMaskRepeat: "no-repeat",
+                WebkitMaskSize: "100% 100%",
+                maskImage:
+                  "linear-gradient(to bottom, rgba(0,0,0,1) 90%, rgba(0,0,0,0) 100%)",
+                maskRepeat: "no-repeat",
+                maskSize: "100% 100%",
+              }}
+            />
+          </div>
           <p className="max-w-2xl text-lg leading-relaxed text-center">
-            Alexandra Abbott, MD is a <br /> board-certified sports medicine physician.
+            Alexandra Abbott, MD is a <br /> board-certified sports medicine
+            physician.
           </p>
         </div>
       </section>
+  
+
 
       {/* Segue */}
       <section className="text-center mt-12">
