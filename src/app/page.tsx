@@ -32,7 +32,7 @@ export default function HomePage() {
           style={{
             objectFit: "cover",
             objectPosition: "center",
-            filter: "contrast(0.9) brightness(0.9) blur(1px)", // softened look
+            filter: "contrast(0.9) brightness(0.9) blur(1px)",
           }}
         />
 
@@ -81,11 +81,11 @@ export default function HomePage() {
           </nav>
         </header>
 
-        {/* Title closer to middle-left */}
+        {/* Title + tagline on left */}
         <div
           style={{
             position: "absolute",
-            top: "35%", // raise title higher into negative space
+            top: "30%", // slightly higher to match mockup negative space
             left: "60px",
             zIndex: 5,
             color: "#fff",
@@ -98,9 +98,19 @@ export default function HomePage() {
           <div style={{ fontSize: "clamp(32px,4vw,48px)", fontWeight: 600 }}>
             SPORT PERFORMANCE
           </div>
+          <div
+            style={{
+              marginTop: "20px",
+              fontSize: "clamp(18px,2vw,24px)",
+              fontWeight: 400,
+              letterSpacing: "2px",
+            }}
+          >
+            SCIENCE IN EVERY REP
+          </div>
         </div>
 
-        {/* About link mid-right instead of bottom */}
+        {/* About link mid-right */}
         <div
           style={{
             position: "absolute",
