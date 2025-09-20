@@ -16,62 +16,47 @@ export default function AboutPage() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          padding: "1rem 3rem",
+          padding: "1rem 2rem",
           zIndex: 100,
           backgroundColor: "rgba(0,0,0,0.6)",
         }}
       >
-        {/* Left: Site Title */}
+        {/* Left: Site Title (link to home) */}
         <Link href="/" style={{ color: "white", fontSize: "1rem", fontWeight: "bold", textDecoration: "none" }}>
           ABBOTT SPORT PERFORMANCE
         </Link>
 
-        {/* Right: Services Dropdown */}
-        <div style={{ position: "relative" }} className="services-menu">
-          <span
+        {/* Right: Services Dropdown (copied from homepage) */}
+        <div className="group relative inline-block text-left">
+          <button
             style={{
               color: "white",
               fontSize: "1rem",
               fontWeight: "bold",
               cursor: "pointer",
+              background: "none",
+              border: "none",
             }}
           >
             Services ▾
-          </span>
+          </button>
           <div
-            style={{
-              position: "absolute",
-              right: 0,
-              marginTop: "0.5rem",
-              backgroundColor: "black",
-              border: "1px solid #333",
-              display: "none",
-              flexDirection: "column",
-              minWidth: "200px",
-            }}
-            className="dropdown"
+            className="absolute right-0 hidden group-hover:flex flex-col mt-2 bg-black border border-gray-700 min-w-[200px]"
           >
-            <Link href="/services/exercise" style={{ padding: "0.75rem 1rem", textDecoration: "none", color: "white" }}>
+            <Link href="/services/exercise" className="px-4 py-2 text-white hover:bg-gray-800">
               Exercise Programs
             </Link>
-            <Link href="/services/rehab" style={{ padding: "0.75rem 1rem", textDecoration: "none", color: "white" }}>
+            <Link href="/services/rehab" className="px-4 py-2 text-white hover:bg-gray-800">
               Rehab Programs
             </Link>
-            <Link href="/services/nutrition" style={{ padding: "0.75rem 1rem", textDecoration: "none", color: "white" }}>
+            <Link href="/services/nutrition" className="px-4 py-2 text-white hover:bg-gray-800">
               Nutrition
             </Link>
-            <Link href="/services/concierge" style={{ padding: "0.75rem 1rem", textDecoration: "none", color: "white" }}>
+            <Link href="/services/concierge" className="px-4 py-2 text-white hover:bg-gray-800">
               Concierge Medicine
             </Link>
           </div>
         </div>
-
-        {/* Inline CSS for hover effect */}
-        <style>{`
-          .services-menu:hover .dropdown {
-            display: flex;
-          }
-        `}</style>
       </nav>
 
       {/* About Section */}
