@@ -2,9 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Inter } from "next/font/google";
+import { Inter, Playfair_Display } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], weight: ["400", "600"] });
+const playfair = Playfair_Display({ subsets: ["latin"], weight: ["700"] });
 
 export default function AboutPage() {
   return (
@@ -35,7 +36,7 @@ export default function AboutPage() {
           href="/"
           style={{
             fontWeight: "bold",
-            fontSize: "1.2rem",
+            fontSize: "1.1rem",
             textDecoration: "none",
             color: "white",
           }}
@@ -50,7 +51,7 @@ export default function AboutPage() {
               border: "none",
               color: "white",
               fontWeight: "bold",
-              fontSize: "1.1rem",
+              fontSize: "1rem",
               cursor: "pointer",
             }}
           >
@@ -87,32 +88,105 @@ export default function AboutPage() {
       {/* Intro Section */}
       <section
         style={{
-          paddingTop: "8rem",
+          paddingTop: "6rem", // raised higher
           maxWidth: "700px",
           margin: "0 auto",
           textAlign: "center",
         }}
       >
-        <h1 style={{ fontSize: "3rem", fontWeight: "bold", marginBottom: "2rem" }}>
+        <h1
+          style={{
+            fontFamily: playfair.style.fontFamily,
+            fontSize: "3rem",
+            marginBottom: "1.5rem",
+          }}
+        >
           Dr Abbott
         </h1>
 
-        <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-          <Image
-            src="/about/headshotcolor.jpg"
-            alt="Dr Abbott"
-            width={0}
-            height={0}
-            sizes="100vw"
-            style={{
-              width: "250px",
-              height: "auto",
-              borderRadius: "15px",
-            }}
-          />
+        <Image
+          src="/about/headshotcolor.jpg"
+          alt="Dr Abbott"
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{
+            width: "250px",
+            height: "auto",
+            borderRadius: "15px",
+            margin: "0 auto",
+          }}
+        />
 
-          <p style={{ fontSize: "1.25rem", lineHeight: "1.8", marginTop: "1.5rem", maxWidth: "600px" }}>
-            Alexandra Abbott, MD is a board-certified sports medicine physician.
+        <p
+          style={{
+            fontSize: "1.25rem",
+            lineHeight: "1.6",
+            marginTop: "1rem",
+          }}
+        >
+          Alexandra Abbott, MD is a board-certified sports medicine physician.
+        </p>
+      </section>
+
+      {/* Sections from your mockup */}
+      <section style={{ marginTop: "4rem", textAlign: "center" }}>
+        <h2 style={{ fontFamily: playfair.style.fontFamily, fontSize: "2rem", marginBottom: "1rem" }}>
+          Collegiate Athlete
+        </h2>
+        <div style={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
+          <Image src="/about/action.jpg" alt="Action" width={250} height={160} style={{ borderRadius: "10px" }} />
+          <Image src="/about/action2.jpg" alt="Action 2" width={250} height={160} style={{ borderRadius: "10px" }} />
+        </div>
+      </section>
+
+      <section style={{ marginTop: "4rem", textAlign: "center" }}>
+        <h2 style={{ fontFamily: playfair.style.fontFamily, fontSize: "2rem", marginBottom: "1rem" }}>
+          Research in Sports Medicine & Pediatrics
+        </h2>
+        <div style={{ display: "flex", justifyContent: "center", gap: "1rem", flexWrap: "wrap" }}>
+          <Image src="/about/kinesiology1.jpg" alt="Kinesiology" width={180} height={120} style={{ borderRadius: "10px" }} />
+          <Image src="/about/kinesiology2.jpg" alt="Kinesiology" width={180} height={120} style={{ borderRadius: "10px" }} />
+          <Image src="/about/kinesiology3.jpg" alt="Kinesiology" width={180} height={120} style={{ borderRadius: "10px" }} />
+          <Image src="/about/kinesiology4.jpg" alt="Kinesiology" width={180} height={120} style={{ borderRadius: "10px" }} />
+          <Image src="/about/researcher.jpg" alt="Research" width={180} height={120} style={{ borderRadius: "10px" }} />
+        </div>
+      </section>
+
+      <section style={{ marginTop: "4rem", textAlign: "center" }}>
+        <h2 style={{ fontFamily: playfair.style.fontFamily, fontSize: "2rem", marginBottom: "1rem" }}>
+          Thousands of Athletes Cared For
+        </h2>
+        <div style={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
+          <Image src="/about/NCAA.jpg" alt="NCAA" width={220} height={140} style={{ borderRadius: "10px" }} />
+          <Image src="/about/NBA.jpg" alt="NBA" width={220} height={140} style={{ borderRadius: "10px" }} />
+          <Image src="/about/MLB.jpg" alt="MLB" width={220} height={140} style={{ borderRadius: "10px" }} />
+        </div>
+      </section>
+
+      <section style={{ marginTop: "4rem", textAlign: "center" }}>
+        <h2 style={{ fontFamily: playfair.style.fontFamily, fontSize: "2rem", marginBottom: "1rem" }}>
+          Passion for Health & Fitness
+        </h2>
+        <div style={{ display: "flex", justifyContent: "center", gap: "1rem" }}>
+          <Image src="/about/snatch.jpg" alt="Snatch" width={220} height={300} style={{ borderRadius: "10px" }} />
+          <Image src="/about/yoga.jpg" alt="Yoga" width={220} height={300} style={{ borderRadius: "10px" }} />
+        </div>
+      </section>
+
+      <section style={{ margin: "4rem auto", textAlign: "center", maxWidth: "600px" }}>
+        <p style={{ fontSize: "1.2rem", lineHeight: "1.8" }}>
+          As a primary care physician who has done the reps herself, Dr. Abbott applies cutting-edge
+          research in sports performance, injury prevention and treatment, nutrition, and more to help
+          you turn the corner and reach your full potential.
+        </p>
+
+        <div style={{ marginTop: "2rem" }}>
+          <Image src="/about/ask dr abbott.jpg" alt="Ask Dr Abbott" width={250} height={250} style={{ borderRadius: "10px" }} />
+          <p style={{ marginTop: "1rem", fontSize: "1.2rem" }}>
+            <Link href="/contact" style={{ color: "white", textDecoration: "underline" }}>
+              Ask Dr. Abbott → Consultation Form
+            </Link>
           </p>
         </div>
       </section>
