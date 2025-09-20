@@ -17,18 +17,18 @@ export default function HomePage() {
           width: "100%",
           backgroundColor: "#000",
           overflow: "hidden",
-          display: "flex",
         }}
       >
         {/* Background image */}
         <Image
-          src="/hero.jpg"
+          src="/hero.jpg" // put your hero image in /public/hero.jpg
           alt="Athlete training"
           fill
           priority
           style={{
             objectFit: "cover",
-            opacity: 0.75,
+            objectPosition: "center",
+            opacity: 0.9,
           }}
         />
 
@@ -40,7 +40,7 @@ export default function HomePage() {
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-between",
-            width: "100%",
+            height: "100%",
             padding: "24px",
             color: "#fff",
           }}
@@ -57,12 +57,12 @@ export default function HomePage() {
             }}
           >
             {/* Logo / Name */}
-            <div>
+            <div style={{ lineHeight: 1.2 }}>
               <div>ABBOTT</div>
               <div>SPORT PERFORMANCE</div>
             </div>
 
-            {/* Right menu */}
+            {/* Right nav */}
             <nav style={{ textAlign: "right" }}>
               <div style={{ marginBottom: "12px" }}>
                 <Link href="/services/exercise" style={{ marginRight: "20px" }}>
@@ -81,13 +81,14 @@ export default function HomePage() {
             </nav>
           </header>
 
-          {/* Hero tagline (center-left) */}
+          {/* Tagline (bottom-left) */}
           <div
             style={{
-              fontSize: "clamp(28px,4vw,54px)",
+              fontSize: "clamp(32px,6vw,60px)",
               fontWeight: 700,
               maxWidth: "50%",
               lineHeight: 1.2,
+              marginBottom: "60px",
             }}
           >
             SCIENCE IN <br /> EVERY REP
