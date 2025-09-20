@@ -20,7 +20,7 @@ export default function HomePage() {
       >
         {/* Full background image */}
         <Image
-          src="/hero.jpg" // replace with your actual file in /public
+          src="/hero.jpg"
           alt="Athlete training"
           fill
           priority
@@ -108,4 +108,15 @@ export default function HomePage() {
               </li>
 
               <li>
-                <
+                <Link href="/cart">🛒 Cart</Link>
+              </li>
+              <li>
+                <Link href="/about">About Dr. Abbott</Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+      </section>
+    </main>
+  );
+}
