@@ -95,3 +95,45 @@ export default function HomePage() {
           <div className="line1">ABBOTT</div>
           <div className="line2">SPORT PERFORMANCE</div>
         </div>
+
+        /* Dropdown container */
+nav li {
+  position: relative;
+}
+
+/* Dropdown hidden by default */
+nav .dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 8px;
+  background: rgba(0, 0, 0, 0.95);
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 8px 0;
+  list-style: none;
+  min-width: 200px;
+  z-index: 10;
+}
+
+/* Show on hover (desktop) */
+nav li:hover > .dropdown {
+  display: block;
+}
+
+/* Show when React adds "open" (mobile click) */
+nav li.open > .dropdown {
+  display: block;
+}
+
+/* Dropdown links */
+nav .dropdown a {
+  display: block;
+  padding: 8px 16px;
+  font-size: 14px;
+  color: #fff;
+}
+
+nav .dropdown a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
