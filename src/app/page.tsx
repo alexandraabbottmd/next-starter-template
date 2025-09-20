@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -10,19 +11,28 @@ export default function HomePage() {
           position: "relative",
           width: "100%",
           height: "100vh",
-          backgroundImage: "url('/hero.jpg')", // ✅ force hero.jpg only
-          backgroundSize: "contain",           // ✅ no stretching
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
           backgroundColor: "black",
         }}
       >
+        {/* ✅ Use Next.js <Image> so hero.jpg always displays */}
+        <Image
+          src="/hero.jpg"
+          alt="Hero"
+          fill
+          priority
+          style={{
+            objectFit: "contain", // keeps aspect ratio, no stretch
+            objectPosition: "center",
+          }}
+        />
+
         {/* Title + Tagline */}
         <div
           style={{
             position: "absolute",
             top: "20%",
             left: "5%",
+            color: "white",
           }}
         >
           <h1 className="hero-title">
@@ -42,7 +52,7 @@ export default function HomePage() {
           }}
         >
           <div className="dropdown">
-            <span style={{ cursor: "pointer" }}>Services ▾</span>
+            <span style={{ cursor: "pointer", color: "white" }}>Services ▾</span>
             <div className="dropdown-content">
               <Link href="/services/exercise">Exercise Programs</Link>
               <Link href="/services/rehab">Rehab Programs</Link>
@@ -60,6 +70,7 @@ export default function HomePage() {
             position: "absolute",
             bottom: "5%",
             right: "5%",
+            color: "white",
           }}
         >
           About Dr. Abbott →
