@@ -1,11 +1,7 @@
-import Image from "next/image";
-import Link from "next/link";
-import Nav from "./Nav";
+"use client";
 
-export const metadata = {
-  title: "Abbott Sport Performance",
-  description: "Science in every rep — physician-designed, evidence-based training and rehab.",
-};
+import Link from "next/link";
+import Image from "next/image";
 
 export default function HomePage() {
   return (
@@ -17,23 +13,33 @@ export default function HomePage() {
         fill
         priority
         style={{
-          objectFit: "cover",
-          objectPosition: "center top",
-          zIndex: -1,
+          objectFit: "cover", // fills screen, no stretch
+          objectPosition: "center",
         }}
       />
 
-      {/* Navigation */}
-      <Nav />
+      {/* Navbar */}
+      <nav className="navbar">
+        <div className="dropdown">
+          <button className="dropbtn">Services ▾</button>
+          <div className="dropdown-content">
+            <Link href="/services/exercise">Exercise Programs</Link>
+            <Link href="/services/rehab">Rehab Programs</Link>
+            <Link href="/services/nutrition">Nutrition</Link>
+            <Link href="/services/concierge">Concierge Medicine</Link>
+          </div>
+        </div>
+      </nav>
 
-      {/* Left block with title/tagline */}
-      <div className="left-block">
-        <h1>ABBOTT<br />SPORT PERFORMANCE</h1>
+      {/* Left text block */}
+      <div className="overlay left">
+        <h1>ABBOTT</h1>
+        <h2>SPORT PERFORMANCE</h2>
         <p>SCIENCE IN EVERY REP</p>
       </div>
 
-      {/* Bottom-right block with About link */}
-      <div className="bottom-block">
+      {/* Bottom-right link */}
+      <div className="overlay bottom-right">
         <Link href="/about">About Dr. Abbott →</Link>
       </div>
     </main>
