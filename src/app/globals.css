@@ -24,6 +24,20 @@ html, body {
 
 /* Reset link colors */
 a {
+  /* Dropdown hover behavior */
+nav li:hover > .dropdown {
+  display: block;
+}
+
+nav .dropdown a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav .dropdown a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
   color: inherit;
   text-decoration: none;
   font-weight: 500;
