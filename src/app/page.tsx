@@ -45,23 +45,26 @@ export default function HomePage() {
 
         {/* Navigation */}
         <nav
-  style={{
-    position: "absolute",
-    top: "5%",
-    right: "5%",
-    zIndex: 20,
-  }}
->
-  <div className="dropdown">
-    <span className="dropdown-label">Services ▾</span>
-    <div className="dropdown-content">
-      <Link href="/services/exercise">Exercise Programs</Link>
-      <Link href="/services/rehab">Rehab Programs</Link>
-      <Link href="/services/nutrition">Nutrition</Link>
-      <Link href="/services/concierge">Concierge Medicine</Link>
-    </div>
-  </div>
-</nav>
+          style={{
+            position: "absolute",
+            top: "5%",
+            right: "5%",
+            zIndex: 20,
+          }}
+        >
+          <div
+            className="dropdown"
+            onClick={() => setOpen(!open)} // click toggle for mobile
+          >
+            <button className="dropdown-label">Services ▾</button>
+            <div className={`dropdown-content ${open ? "show" : ""}`}>
+              <Link href="/services/exercise">Exercise Programs</Link>
+              <Link href="/services/rehab">Rehab Programs</Link>
+              <Link href="/services/nutrition">Nutrition</Link>
+              <Link href="/services/concierge">Concierge Medicine</Link>
+            </div>
+          </div>
+        </nav>
 
         {/* About link */}
         <Link
