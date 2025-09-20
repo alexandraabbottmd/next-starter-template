@@ -9,42 +9,33 @@ export const metadata = {
 
 export default function HomePage() {
   return (
-    <main style={{ margin: 0, padding: 0, overflow: "hidden" }}>
-      <section
-        className="hero"
+    <main className="hero">
+      {/* Background image */}
+      <Image
+        src="/hero.jpg"
+        alt="Athlete training"
+        fill
+        priority
         style={{
-          height: "100vh",
-          width: "100vw",
-          position: "relative",
-          overflow: "hidden",
+          objectFit: "cover",
+          objectPosition: "center top",
+          zIndex: -1,
         }}
-      >
-        {/* Background image anchored cover */}
-        <Image
-          src="/hero.jpg"
-          alt="Athlete training"
-          fill
-          priority
-          style={{
-            objectFit: "cover",
-            objectPosition: "center top", // anchor from top center
-          }}
-        />
+      />
 
-        {/* Navigation */}
-        <Nav />
+      {/* Navigation */}
+      <Nav />
 
-        {/* Title */}
-        <h1 className="hero-title">ABBOTT<br />SPORT PERFORMANCE</h1>
+      {/* Left block with title/tagline */}
+      <div className="left-block">
+        <h1>ABBOTT<br />SPORT PERFORMANCE</h1>
+        <p>SCIENCE IN EVERY REP</p>
+      </div>
 
-        {/* Tagline */}
-        <p className="hero-tagline">SCIENCE IN EVERY REP</p>
-
-        {/* About link */}
-        <Link href="/about" className="about-link">
-          About Dr. Abbott →
-        </Link>
-      </section>
+      {/* Bottom-right block with About link */}
+      <div className="bottom-block">
+        <Link href="/about">About Dr. Abbott →</Link>
+      </div>
     </main>
   );
 }
