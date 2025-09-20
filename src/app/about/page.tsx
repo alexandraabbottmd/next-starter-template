@@ -14,9 +14,8 @@ export default function AboutPage() {
           left: 0,
           width: "100%",
           display: "flex",
-          justifyContent: "space-between",
           alignItems: "center",
-          padding: "1rem 2rem", // ✅ now controls left/right consistently
+          padding: "1rem 2rem",
           zIndex: 100,
           backgroundColor: "rgba(0,0,0,0.6)",
         }}
@@ -26,8 +25,8 @@ export default function AboutPage() {
           ABBOTT SPORT PERFORMANCE
         </Link>
 
-        {/* Right: Services Dropdown */}
-        <div className="group relative inline-block text-left">
+        {/* Spacer pushes services right but keeps padding */}
+        <div style={{ marginLeft: "auto" }} className="group relative inline-block text-left">
           <button
             style={{
               color: "white",
