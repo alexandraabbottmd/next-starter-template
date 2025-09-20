@@ -12,7 +12,10 @@ export default function AboutPage() {
           position: "fixed",
           top: 0,
           left: 0,
+          right: 0,
           width: "100%",
+          maxWidth: "1200px", // ✅ keeps nav aligned with content
+          margin: "0 auto",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -26,7 +29,7 @@ export default function AboutPage() {
           ABBOTT SPORT PERFORMANCE
         </Link>
 
-        {/* Right: Services Dropdown (copied from homepage) */}
+        {/* Right: Services Dropdown */}
         <div className="group relative inline-block text-left">
           <button
             style={{
@@ -41,7 +44,7 @@ export default function AboutPage() {
             Services ▾
           </button>
           <div
-            className="absolute right-0 hidden group-hover:flex flex-col mt-2 bg-black border border-gray-700 min-w-[200px]"
+            className="absolute right-0 hidden group-hover:flex flex-col mt-2 bg-black min-w-[200px]" // ✅ removed border
           >
             <Link href="/services/exercise" className="px-4 py-2 text-white hover:bg-gray-800">
               Exercise Programs
