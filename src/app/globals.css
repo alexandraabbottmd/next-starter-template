@@ -1,3 +1,20 @@
+/* Reset margins and remove any outlines/borders */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  background: #000;
+}
+
+img, picture, video, canvas {
+  display: block;
+  max-width: 100%;
+}
+
 /* Base palette */
 :root {
   --bg: #000;             /* default background black */
