@@ -1,9 +1,28 @@
-"use client"; 
+"use client";
 
 import Link from "next/link";
-import "./globals.css"; // ✅ makes sure global styles apply
+import { useState, useRef, useEffect } from "react";
+import "./globals.css";
 
 export default function HomePage() {
+  const [open, setOpen] = useState(false);
+
+  // 👇 declare the ref here
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
+
   return (
     <main style={{ margin: 0, padding: 0, overflow: "hidden", backgroundColor: "black" }}>
       <section
@@ -43,7 +62,7 @@ export default function HomePage() {
           </p>
         </div>
 
-      {/* Navigation */}
+        {/* Navigation */}
         <nav
           style={{
             position: "absolute",
@@ -52,10 +71,7 @@ export default function HomePage() {
             zIndex: 20,
           }}
         >
-          <div
-            className="dropdown"
-            ref={dropdownRef}
-          >
+          <div className="dropdown" ref={dropdownRef}>
             <button
               className="dropdown-label"
               onClick={() => setOpen(!open)}
@@ -84,7 +100,7 @@ export default function HomePage() {
             fontFamily: "sans-serif",
           }}
         >
-          About Dr. Abbott
+          About Dr. Abbott →
         </Link>
       </section>
     </main>
