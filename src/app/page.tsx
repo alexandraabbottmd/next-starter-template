@@ -5,10 +5,10 @@ import Link from "next/link";
 export default function HomePage() {
   return (
     <main className="hero">
-      {/* Background image */}
+      {/* Background image (change path to your real hero photo in /public) */}
       <Image
-        src="/about/action.jpg"   // 👈 adjust path to your uploaded image
-        alt="Athlete training"
+        src="/home/hero.jpg"   // 👈 replace with your actual hero image filename
+        alt="Abbott Athletes"
         fill
         priority
         className="hero-bg"
