@@ -43,7 +43,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        {/* Navigation */}
+      {/* Navigation */}
         <nav
           style={{
             position: "absolute",
@@ -54,9 +54,14 @@ export default function HomePage() {
         >
           <div
             className="dropdown"
-            onClick={() => setOpen(!open)} // click toggle for mobile
+            ref={dropdownRef}
           >
-            <button className="dropdown-label">Services ▾</button>
+            <button
+              className="dropdown-label"
+              onClick={() => setOpen(!open)}
+            >
+              Services ▾
+            </button>
             <div className={`dropdown-content ${open ? "show" : ""}`}>
               <Link href="/services/exercise">Exercise Programs</Link>
               <Link href="/services/rehab">Rehab Programs</Link>
