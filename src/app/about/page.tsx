@@ -1,108 +1,71 @@
-import Link from "next/link";
+"use client";
+
 import Image from "next/image";
+import Link from "next/link";
 
 export default function AboutPage() {
   return (
-    <div className="bg-black text-white min-h-screen">
-      {/* Header */}
-      <header className="flex justify-between items-center px-6 py-4">
-        <Link
-          href="/"
-          className="text-lg font-bold tracking-wide hover:text-gray-300"
-        >
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Navbar */}
+      <nav className="flex justify-between items-center px-8 py-4">
+        <Link href="/" className="text-lg font-semibold tracking-wide">
           ABBOTT SPORT PERFORMANCE
         </Link>
-        <nav>
-          <div className="relative group">
-            <button className="text-lg font-bold hover:text-gray-300">
-              Services
-            </button>
-            <ul className="absolute right-0 mt-2 hidden w-56 bg-black text-white rounded-md shadow-lg group-hover:block list-none p-0 m-0">
-              <li>
-                <Link
-                  href="/services/exercise"
-                  className="block px-4 py-2 hover:bg-gray-800"
-                >
-                  Exercise Programs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/rehab"
-                  className="block px-4 py-2 hover:bg-gray-800"
-                >
-                  Rehab Programs
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/nutrition"
-                  className="block px-4 py-2 hover:bg-gray-800"
-                >
-                  Nutrition
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/services/concierge"
-                  className="block px-4 py-2 hover:bg-gray-800"
-                >
-                  Concierge Medicine
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </header>
-
-      {/* Hero */}
-      <section className="text-center py-12">
-        <h1 className="text-4xl font-extrabold mb-6">Dr Abbott</h1>
-        <div className="flex justify-center mb-6">
-          <div className="relative w-[300px] h-[400px] rounded-xl overflow-hidden">
-            <Image
-              src="/images/dr-abbott.jpg"
-              alt="Dr. Abbott"
-              fill
-              className="object-cover rounded-xl"
-              style={{
-                maskImage:
-                  "linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)",
-                WebkitMaskImage:
-                  "linear-gradient(to bottom, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)",
-              }}
-            />
-          </div>
+        <div>
+          <Link href="/services" className="text-lg font-semibold hover:underline">
+            Services
+          </Link>
         </div>
-        <p className="text-lg max-w-xl mx-auto leading-relaxed">
+      </nav>
+
+      {/* Hero Section */}
+      <section className="text-center mt-8">
+        <h1 className="text-5xl font-extrabold mb-6">Dr Abbott</h1>
+
+        {/* Headshot with fade */}
+        <div className="relative w-[350px] h-[450px] mx-auto">
+          <Image
+            src="/headshotcolor.jpg"
+            alt="Dr. Abbott"
+            fill
+            className="object-cover rounded-lg"
+            style={{
+              maskImage:
+                "radial-gradient(circle at center, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)",
+              WebkitMaskImage:
+                "radial-gradient(circle at center, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%)",
+            }}
+          />
+        </div>
+
+        {/* Subtitle with line break */}
+        <p className="mt-6 text-xl text-center leading-relaxed max-w-2xl mx-auto">
           Alexandra Abbott, MD is a <br />
-          <span className="font-semibold">
-            board-certified sports medicine physician.
-          </span>
+          board-certified sports medicine physician.
         </p>
       </section>
 
-      {/* Experience Segue */}
-      <section className="text-center mt-10 mb-6">
-        <p className="italic text-gray-300">
+      {/* Intro line */}
+      <section className="text-center mt-10">
+        <p className="italic text-lg text-gray-300">
           Her expertise comes from years of education, training, and experience:
         </p>
       </section>
 
       {/* Collegiate Athlete */}
-      <section className="text-center py-10">
-        <h2 className="text-3xl font-bold mb-6">Collegiate Athlete</h2>
-        <div className="flex justify-center gap-6">
+      <section className="mt-16 text-center">
+        <h2 className="text-4xl font-bold mb-6">Collegiate Athlete</h2>
+        <div className="flex justify-center gap-8">
           <Image
-            src="/images/soccer1.jpg"
-            alt="Soccer goalie"
+            src="/goalie.jpg"
+            alt="Goalkeeper save"
             width={300}
             height={200}
             className="rounded-lg object-cover"
           />
           <Image
-            src="/images/soccer2.jpg"
-            alt="Soccer field play"
+            src="/soccer.jpg"
+            alt="Soccer action"
             width={300}
             height={200}
             className="rounded-lg object-cover"
@@ -111,117 +74,90 @@ export default function AboutPage() {
       </section>
 
       {/* Kinesiology + Research */}
-      <section className="grid md:grid-cols-2 gap-12 text-center py-10 px-6">
-        <div>
-          <h2 className="text-2xl font-bold mb-4">
-            Kinesiology with emphasis in Exercise Science
-          </h2>
-          <div className="flex justify-center gap-4">
-            <Image
-              src="/images/kinesiology1.jpg"
-              alt="Kinesiology chart"
-              width={200}
-              height={150}
-              className="rounded-lg object-cover"
-            />
-            <Image
-              src="/images/kinesiology2.jpg"
-              alt="Kinesiology research"
-              width={200}
-              height={150}
-              className="rounded-lg object-cover"
-            />
-          </div>
+      <section className="mt-20 text-center">
+        <h2 className="text-3xl font-semibold mb-6">
+          Kinesiology with emphasis in Exercise Science
+        </h2>
+        <div className="flex justify-center gap-6 mb-12">
+          <Image src="/graph.jpg" alt="Graph" width={200} height={150} className="rounded-md" />
+          <Image src="/data.jpg" alt="Data" width={200} height={150} className="rounded-md" />
+          <Image src="/building.jpg" alt="Building" width={200} height={150} className="rounded-md" />
         </div>
-        <div>
-          <h2 className="text-2xl font-bold mb-4">
-            Prolific research in sports medicine, orthopedics, and pediatrics
-          </h2>
-          <Image
-            src="/images/research.jpg"
-            alt="Research"
-            width={250}
-            height={200}
-            className="rounded-lg object-cover mx-auto mb-3"
-          />
+
+        <h2 className="text-3xl font-semibold mb-6">
+          Prolific research in sports medicine, orthopedics, and pediatrics
+        </h2>
+        <div className="flex flex-col items-center">
+          <Image src="/research.jpg" alt="Research photo" width={300} height={200} className="rounded-md" />
           <Link
             href="https://pubmed.ncbi.nlm.nih.gov/?term=Abbott+A&cauthor_id=35253062"
             target="_blank"
-            className="text-blue-400 hover:underline"
+            className="mt-4 text-blue-400 hover:underline"
           >
-            View Dr. Abbott’s publications on PubMed
+            Dr. Abbott’s publications on PubMed
           </Link>
         </div>
       </section>
 
-      {/* Patients */}
-      <section className="text-center py-10">
-        <h2 className="text-2xl font-bold mb-6">
+      {/* Athletes cared for */}
+      <section className="mt-20 text-center">
+        <h2 className="text-2xl italic mb-6">
           Thousands of athletes cared for, including NCAA Division I, NBA, MLB athletes
         </h2>
-        <div className="flex justify-center gap-6 flex-wrap">
-          <Image
-            src="/images/rosebowl.jpg"
-            alt="Rose Bowl"
-            width={250}
-            height={180}
-            className="rounded-lg object-cover"
-          />
-          <Image
-            src="/images/ucla.jpg"
-            alt="UCLA Health"
-            width={250}
-            height={180}
-            className="rounded-lg object-cover"
-          />
-          <Image
-            src="/images/stadium.jpg"
-            alt="Stadium"
-            width={250}
-            height={180}
-            className="rounded-lg object-cover"
-          />
+        <div className="flex justify-center gap-8">
+          <Image src="/rosebowl.jpg" alt="Rose Bowl" width={250} height={200} className="rounded-lg" />
+          <Image src="/ucla.jpg" alt="UCLA Health" width={250} height={200} className="rounded-lg" />
+          <Image src="/stadium.jpg" alt="Dodger Stadium" width={250} height={200} className="rounded-lg" />
         </div>
+        <p className="mt-4 text-sm text-gray-400 italic">
+          She currently practices at Stanford Children’s —{" "}
+          <Link
+            href="https://www.stanfordchildrens.org/en/doctor/alexandra-morgan-abbott.html"
+            target="_blank"
+            className="underline"
+          >
+            See profile here
+          </Link>
+        </p>
       </section>
 
-      {/* Passion + Fitness */}
-      <section className="text-center py-10">
-        <h2 className="text-2xl font-bold mb-6">
+      {/* Fitness passion */}
+      <section className="mt-20 text-center">
+        <h2 className="text-2xl italic mb-6">
           Lifelong passion and dedication to health, wellness, and physical fitness
         </h2>
-        <div className="flex justify-center gap-6 flex-wrap">
-          <Image
-            src="/images/fitness1.jpg"
-            alt="Workout 1"
-            width={250}
-            height={300}
-            className="rounded-lg object-cover"
-          />
-          <Image
-            src="/images/fitness2.jpg"
-            alt="Workout 2"
-            width={250}
-            height={300}
-            className="rounded-lg object-cover"
-          />
+        <div className="flex justify-center gap-8">
+          <Image src="/weights.jpg" alt="Workout" width={250} height={300} className="rounded-lg" />
+          <Image src="/yoga.jpg" alt="Stretching" width={250} height={300} className="rounded-lg" />
         </div>
       </section>
 
-      {/* Closing */}
-      <section className="text-center py-10 px-6 max-w-3xl mx-auto">
-        <p className="mb-6">
-          As a primary care physician <em>who has done the reps herself</em>, Dr.
-          Abbott applies cutting edge research in sports performance, injury
-          prevention and treatment, nutrition, and more to help you turn the
-          corner and reach your full potential.
+      {/* Closing statement */}
+      <section className="mt-20 text-center max-w-3xl mx-auto">
+        <p className="text-lg leading-relaxed">
+          As a primary care physician <span className="italic">who has done the reps herself</span>, Dr. Abbott
+          applies cutting edge research in sports performance, injury prevention and treatment, nutrition, and
+          more to help you turn the corner and reach your full potential.
         </p>
-        <Link
-          href="/contact"
-          className="text-lg font-bold text-blue-400 hover:underline"
-        >
+      </section>
+
+      {/* Ask Dr. Abbott */}
+      <section className="mt-20 text-center">
+        <Image src="/sideline.jpg" alt="Sideline photo" width={250} height={250} className="rounded-full mx-auto" />
+        <Link href="/consultation" className="block mt-6 text-xl font-semibold text-blue-400 hover:underline">
           Ask Dr. Abbott
         </Link>
       </section>
+
+      {/* Footer */}
+      <footer className="mt-20 text-center text-sm text-gray-500 space-x-4">
+        <Link href="/contact" className="hover:underline">
+          Contact
+        </Link>
+        <Link href="/disclaimer" className="hover:underline">
+          Disclaimer
+        </Link>
+      </footer>
     </div>
   );
 }
