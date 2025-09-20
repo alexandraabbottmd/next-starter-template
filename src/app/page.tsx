@@ -76,8 +76,8 @@ export default function HomePage() {
               className="dropdown-label"
               onClick={() => setOpen(!open)}
             >
-              Services ▾
-            </button>
+              Services
+          
             <div className={`dropdown-content ${open ? "show" : ""}`}>
               <Link href="/services/exercise">Exercise Programs</Link>
               <Link href="/services/rehab">Rehab Programs</Link>
@@ -100,7 +100,7 @@ export default function HomePage() {
             fontFamily: "sans-serif",
           }}
         >
-          About Dr. Abbott →
+          About Dr. Abbott
         </Link>
       </section>
     </main>
