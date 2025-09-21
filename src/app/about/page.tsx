@@ -1,89 +1,75 @@
 "use client";
 
-import { useState } from "react"; // Importing useState for dropdown
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
-  const [servicesOpen, setServicesOpen] = useState(false); // State for dropdown visibility
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
     <div className="min-h-screen bg-black text-white font-sans">
       {/* Fixed Header Banner */}
       <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
         <div className="container mx-auto px-8 h-20 flex justify-between items-center bg-black">
-          <Link href="/" className="text-lg font-bold tracking-wide text-white">
+          <Link href="/" className="text-lg font-bold tracking-wide text-white z-50">
             ABBOTT <br /> SPORT PERFORMANCE
           </Link>
 
-          {/* Services Dropdown */}
-          <nav
-            style={{
-              position: "absolute",
-              top: "5%",
-              right: "5%",
-              zIndex: 20,
-            }}
-          >
+          {/* Services Dropdown - Fixed positioning */}
+          <nav className="relative z-50">
             <div className="dropdown">
               <span
-                className="dropdown-label font-semibold cursor-pointer"
+                className="dropdown-label font-semibold cursor-pointer text-white hover:text-gray-300"
                 onClick={() => setServicesOpen(!servicesOpen)}
               >
                 Services
               </span>
-              <div
-                className={`dropdown-content ${servicesOpen ? "show" : ""}`}
-                style={{
-                  position: "absolute",
-                  backgroundColor: "black",
-                  boxShadow: "0 8px 16px rgba(0, 0, 0, 0.5)",
-                  padding: "10px 0",
-                  right: "0",
-                  minWidth: "200px",
-                  zIndex: "10",
-                }}
-              >
-                <Link
-                  href="/services/exercise"
-                  onClick={() => setServicesOpen(false)}
-                  className="px-4 py-2 block text-white hover:bg-gray-800"
+              {servicesOpen && (
+                <div
+                  className="absolute top-full right-0 mt-2 bg-black border border-gray-700 rounded-md shadow-lg min-w-[200px] z-50"
                 >
-                  Exercise Programs
-                </Link>
-                <Link
-                  href="/services/rehab"
-                  onClick={() => setServicesOpen(false)}
-                  className="px-4 py-2 block text-white hover:bg-gray-800"
-                >
-                  Rehab Programs
-                </Link>
-                <Link
-                  href="/services/nutrition"
-                  onClick={() => setServicesOpen(false)}
-                  className="px-4 py-2 block text-white hover:bg-gray-800"
-                >
-                  Nutrition
-                </Link>
-                <Link
-                  href="/services/concierge"
-                  onClick={() => setServicesOpen(false)}
-                  className="px-4 py-2 block text-white hover:bg-gray-800"
-                >
-                  Concierge Medicine
-                </Link>
-              </div>
+                  <Link
+                    href="/services/exercise"
+                    onClick={() => setServicesOpen(false)}
+                    className="block px-4 py-2 text-white hover:bg-gray-800 first:rounded-t-md"
+                  >
+                    Exercise Programs
+                  </Link>
+                  <Link
+                    href="/services/rehab"
+                    onClick={() => setServicesOpen(false)}
+                    className="block px-4 py-2 text-white hover:bg-gray-800"
+                  >
+                    Rehab Programs
+                  </Link>
+                  <Link
+                    href="/services/nutrition"
+                    onClick={() => setServicesOpen(false)}
+                    className="block px-4 py-2 text-white hover:bg-gray-800"
+                  >
+                    Nutrition
+                  </Link>
+                  <Link
+                    href="/services/concierge"
+                    onClick={() => setServicesOpen(false)}
+                    className="block px-4 py-2 text-white hover:bg-gray-800 last:rounded-b-md"
+                  >
+                    Concierge Medicine
+                  </Link>
+                </div>
+              )}
             </div>
           </nav>
         </div>
       </header>
 
       {/* Spacer to prevent content overlap */}
-      <div className="h-20"></div> {/* This spacer creates space for the fixed header */}
+      <div className="h-20"></div>
 
       {/* Main Content */}
       <main className="container mx-auto px-8 pt-32">
-        {/* Hero Section */}
+        {/* Rest of your content remains the same */}
         <section className="text-center h-screen pt-10">
           <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
           <div className="flex justify-center mb-6">
@@ -100,6 +86,9 @@ export default function AboutPage() {
           </p>
         </section>
 
+        {/* Rest of your sections... */}
+        {/* I'll keep the rest of your content as is since the issue was just with the header */}
+        
         {/* Segue */}
         <section className="mt-20 text-center">
           <p className="text-center italic mt-10 max-w-2xl mx-auto">
@@ -182,7 +171,7 @@ export default function AboutPage() {
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline"
             >
-              Dr. Abbott’s Publications
+              Dr. Abbott's Publications
             </a>
           </p>
         </section>
