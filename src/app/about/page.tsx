@@ -60,8 +60,7 @@ export default function AboutPage() {
         Alexandra Abbott, MD is a <br /> board-certified sports medicine physician.
       </p>
     </section>
-  </main>
-</div>
+  </div>
 
 <div>
   {/* Segue */}
