@@ -87,7 +87,7 @@ export default function AboutPage() {
         </section>
 
         {/* Rest of your sections... */}
-        {/* I'll keep the rest of your content as is since the issue was just with the header */}
+        {/* Ill keep the rest of your content as is since the issue was just with the header */}
         
         {/* Segue */}
         <section className="mt-20 text-center">
