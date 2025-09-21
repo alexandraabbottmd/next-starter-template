@@ -62,7 +62,7 @@ export default function AboutPage() {
     </section>
   </div>
 
-<div>
+      
   {/* Segue */}
   <p className="text-center italic mt-10">
     Her expertise comes from years of education, training, and experience:
