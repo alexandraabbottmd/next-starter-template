@@ -21,7 +21,7 @@ export default function AboutPage() {
           onMouseEnter={() => setServicesOpen(true)}
           onMouseLeave={() => setServicesOpen(false)}
         >
-          <span className="font-semibold cursor-pointer">Services ▾</span>
+          <span className="font-semibold cursor-pointer">Services </span>
           {servicesOpen && (
             <ul className="absolute right-0 mt-2 bg-black text-white shadow-lg rounded min-w-[200px] translate-x-[-20%]">
               <li className="px-4 py-2 hover:bg-gray-800">
@@ -42,7 +42,7 @@ export default function AboutPage() {
       </header>
 
       {/* Hero */}
-      <section className="text-center">
+      <section className="text-center mt-12">
         <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
         <div className="flex justify-center">
           <Image
