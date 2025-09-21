@@ -67,7 +67,6 @@ export default function AboutPage() {
   <p className="text-center italic mt-10">
     Her expertise comes from years of education, training, and experience:
   </p>
-</div>
 
 
       {/* Collegiate Athlete */}
