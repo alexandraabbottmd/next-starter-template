@@ -102,7 +102,7 @@ export default function AboutPage() {
             <Image
               src="/about/action2.jpg"
               alt="Soccer action"
-              width={300}
+              width={200}
               height={200}
               className="rounded-lg object-cover"
             />
@@ -151,7 +151,7 @@ export default function AboutPage() {
             <Image
               src="/about/researcher.jpg"
               alt="Researcher"
-              width={320}
+              width={200}
               height={250}
               className="rounded-lg"
             />
