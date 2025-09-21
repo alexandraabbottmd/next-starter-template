@@ -1,3 +1,14 @@
+"use client";
+
+import { useState } from "react"; // Importing useState for dropdown
+import Image from "next/image";
+import Link from "next/link";
+
+export default function AboutPage() {
+  const [servicesOpen, setServicesOpen] = useState(false); // State for dropdown visibility
+
+  return
+
 {/* Fixed Header Banner */}
 <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
   <div className="container mx-auto px-8 h-20 flex justify-between items-center bg-black">
