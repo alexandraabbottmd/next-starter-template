@@ -12,12 +12,10 @@ export default function AboutPage() {
       {/* Fixed Header Banner */}
       <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
         <div className="container mx-auto px-8 h-20 flex justify-between items-center">
-          {/* Logo / Home */}
           <Link href="/" className="text-lg font-bold tracking-wide text-white">
             ABBOTT SPORT PERFORMANCE
           </Link>
 
-          {/* Services Dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
@@ -45,11 +43,11 @@ export default function AboutPage() {
       </header>
 
       {/* Main Content */}
-      <main className="pt-40">
-        {/* Hero */}
-        <section className="container mx-auto px-8 min-h-[80vh] flex flex-col justify-center text-center">
+      <main className="container mx-auto px-8 pt-32">
+        {/* Hero Section */}
+        <section className="text-center h-screen pt-10">
           <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
-          <div className="flex justify-center">
+          <div className="flex justify-center mb-6">
             <Image
               src="/about/headshotcolor.jpg"
               alt="Dr. Alexandra Abbott headshot"
@@ -58,21 +56,22 @@ export default function AboutPage() {
               className="rounded-lg"
             />
           </div>
-          <p className="mt-6 text-lg italic max-w-xl mx-auto">
-            Alexandra Abbott, MD is a <br /> board-certified sports medicine
-            physician.
+          <p className="mt-4 text-lg italic max-w-2xl mx-auto">
+            Alexandra Abbott, MD is a <br /> board-certified sports medicine physician.
           </p>
         </section>
 
         {/* Segue */}
-        <p className="text-center italic mt-12 max-w-2xl mx-auto">
-          Her expertise comes from years of education, training, and experience:
-        </p>
+        <section className="mt-20 text-center">
+          <p className="text-center italic mt-10 max-w-2xl mx-auto">
+            Her expertise comes from years of education, training, and experience:
+          </p>
+        </section>
 
         {/* Collegiate Athlete */}
-        <section className="container mx-auto px-8 py-20 text-center">
-          <h2 className="text-3xl font-bold mb-6">Collegiate Athlete</h2>
-          <div className="flex justify-center gap-8 flex-wrap">
+        <section className="mt-20">
+          <h2 className="text-3xl font-bold mb-6 text-center">Collegiate Athlete</h2>
+          <div className="flex justify-center gap-6 flex-wrap">
             <Image
               src="/about/action.jpg"
               alt="Goalkeeper save"
@@ -91,11 +90,9 @@ export default function AboutPage() {
         </section>
 
         {/* Kinesiology */}
-        <section className="container mx-auto px-8 py-20 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Kinesiology with emphasis in Exercise Science
-          </h2>
-          <div className="flex justify-center flex-wrap gap-8">
+        <section className="text-center mt-16">
+          <h2 className="text-3xl font-bold mb-6">Kinesiology with emphasis in Exercise Science</h2>
+          <div className="flex justify-center flex-wrap gap-6">
             <Image
               src="/about/kinesiology1.jpg"
               alt="Graph"
@@ -128,10 +125,8 @@ export default function AboutPage() {
         </section>
 
         {/* Research */}
-        <section className="container mx-auto px-8 py-20 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Prolific research in sports medicine, orthopedics, and pediatrics
-          </h2>
+        <section className="text-center mt-16">
+          <h2 className="text-3xl font-bold mb-6">Prolific research in Sports Medicine, Orthopedics, and Pediatrics</h2>
           <div className="flex justify-center">
             <Image
               src="/about/researcher.jpg"
@@ -148,18 +143,17 @@ export default function AboutPage() {
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline"
             >
-              Dr. Abbott’s publications (link to PubMed)
+              Dr. Abbott’s Publications
             </a>
           </p>
         </section>
 
-        {/* Athletes cared for */}
-        <section className="container mx-auto px-8 py-20 text-center">
+        {/* Athletes Cared For */}
+        <section className="text-center mt-16">
           <h2 className="text-3xl font-bold mb-6">
-            Thousands of athletes cared for, including NCAA Division I, NBA, MLB
-            athletes
+            Thousands of athletes cared for, including NCAA Division I, NBA, MLB athletes
           </h2>
-          <div className="flex justify-center gap-8 flex-wrap">
+          <div className="flex justify-center gap-6">
             <Image
               src="/about/NCAA.jpg"
               alt="NCAA Rose Bowl"
@@ -195,13 +189,10 @@ export default function AboutPage() {
           </p>
         </section>
 
-        {/* Fitness passion */}
-        <section className="container mx-auto px-8 py-20 text-center">
-          <h2 className="text-3xl font-bold mb-6">
-            Lifelong passion and dedication to health, wellness, and physical
-            fitness
-          </h2>
-          <div className="flex justify-center gap-8 flex-wrap">
+        {/* Fitness Passion */}
+        <section className="text-center mt-16">
+          <h2 className="text-3xl font-bold mb-6">Lifelong passion and dedication to health, wellness, and physical fitness</h2>
+          <div className="flex justify-center gap-6">
             <Image
               src="/about/snatch.jpg"
               alt="Snatch"
@@ -220,12 +211,11 @@ export default function AboutPage() {
         </section>
 
         {/* Ask Dr Abbott */}
-        <section className="container mx-auto px-8 py-20 text-center">
+        <section className="text-center mt-16">
           <p className="text-lg italic max-w-2xl mx-auto">
-            As a primary care physician who has done the reps herself, Dr.
-            Abbott applies cutting edge research in sports performance, injury
-            prevention and treatment, nutrition, and more to help you turn the
-            corner and reach your full potential.
+            As a primary care physician who has done the reps herself, Dr. Abbott applies cutting-edge research in sports
+            performance, injury prevention and treatment, nutrition, and more to help you turn the corner and reach your full
+            potential.
           </p>
           <div className="mt-6 flex justify-center">
             <Image
@@ -237,23 +227,21 @@ export default function AboutPage() {
             />
           </div>
           <p className="mt-4">
-            <Link
-              href="/contact"
-              className="text-blue-400 hover:underline font-semibold"
-            >
+            <Link href="/contact" className="text-blue-400 hover:underline font-semibold">
               Ask Dr. Abbott
             </Link>
           </p>
         </section>
-      </main>
 
-      {/* Footer */}
-      <footer className="text-center py-12 text-sm text-gray-400">
-        <p>Contact</p>
-        <p>Disclaimers</p>
-      </footer>
+        {/* Footer */}
+        <footer className="text-center mt-16 pb-6 text-sm text-gray-400">
+          <p>Contact</p>
+          <p>Disclaimers</p>
+        </footer>
+      </main>
     </div>
   );
 }
+
 
 
