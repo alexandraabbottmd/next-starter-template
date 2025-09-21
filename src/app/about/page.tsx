@@ -1,106 +1,104 @@
 "use client";
 
-import { useState } from "react"; // Importing useState for dropdown
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
-  const [servicesOpen, setServicesOpen] = useState(false); // State for dropdown visibility
+  const [servicesOpen, setServicesOpen] = useState(false);
 
-  return
+  return (
+    <> {/* Start of the single root element */}
+      {/* Fixed Header Banner */}
+      <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
+        <div className="container mx-auto px-8 h-20 flex justify-between items-center bg-black">
+          <Link href="/" className="text-lg font-bold tracking-wide text-white">
+            ABBOTT <br /> SPORT PERFORMANCE
+          </Link>
 
-{/* Fixed Header Banner */}
-<header className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
-  <div className="container mx-auto px-8 h-20 flex justify-between items-center bg-black">
-    <Link href="/" className="text-lg font-bold tracking-wide text-white">
-      ABBOTT <br /> SPORT PERFORMANCE
-    </Link>
-
-    {/* Services Dropdown */}
-    <nav
-      style={{
-        position: "absolute",
-        top: "5%",
-        right: "5%",
-        zIndex: 20,
-      }}
-    >
-      <div className="dropdown">
-        <span
-          className="dropdown-label font-semibold cursor-pointer"
-          onClick={() => setServicesOpen(!servicesOpen)}
-        >
-          Services
-        </span>
-        <div
-          className={`dropdown-content ${servicesOpen ? "show" : ""}`}
-          style={{
-            position: "absolute",
-            backgroundColor: "black", 
-            boxShadow: "0 8px 16px rgba(0, 0, 0, 0.5)",
-            padding: "10px 0",
-            right: "0",
-            minWidth: "200px",
-            zIndex: "10",
-          }}
-        >
-          <Link
-            href="/services/exercise"
-            onClick={() => setServicesOpen(false)}
-            className="px-4 py-2 block text-white hover:bg-gray-800"
+          {/* Services Dropdown */}
+          <nav
+            style={{
+              position: "absolute",
+              top: "5%",
+              right: "5%",
+              zIndex: 20,
+            }}
           >
-            Exercise Programs
-          </Link>
-          <Link
-            href="/services/rehab"
-            onClick={() => setServicesOpen(false)}
-            className="px-4 py-2 block text-white hover:bg-gray-800"
-          >
-            Rehab Programs
-          </Link>
-          <Link
-            href="/services/nutrition"
-            onClick={() => setServicesOpen(false)}
-            className="px-4 py-2 block text-white hover:bg-gray-800"
-          >
-            Nutrition
-          </Link>
-          <Link
-            href="/services/concierge"
-            onClick={() => setServicesOpen(false)}
-            className="px-4 py-2 block text-white hover:bg-gray-800"
-          >
-            Concierge Medicine
-          </Link>
+            <div className="dropdown">
+              <span
+                className="dropdown-label font-semibold cursor-pointer"
+                onClick={() => setServicesOpen(!servicesOpen)}
+              >
+                Services
+              </span>
+              <div
+                className={`dropdown-content ${servicesOpen ? "show" : ""}`}
+                style={{
+                  position: "absolute",
+                  backgroundColor: "black",
+                  boxShadow: "0 8px 16px rgba(0, 0, 0, 0.5)",
+                  padding: "10px 0",
+                  right: "0",
+                  minWidth: "200px",
+                  zIndex: "10",
+                }}
+              >
+                <Link
+                  href="/services/exercise"
+                  onClick={() => setServicesOpen(false)}
+                  className="px-4 py-2 block text-white hover:bg-gray-800"
+                >
+                  Exercise Programs
+                </Link>
+                <Link
+                  href="/services/rehab"
+                  onClick={() => setServicesOpen(false)}
+                  className="px-4 py-2 block text-white hover:bg-gray-800"
+                >
+                  Rehab Programs
+                </Link>
+                <Link
+                  href="/services/nutrition"
+                  onClick={() => setServicesOpen(false)}
+                  className="px-4 py-2 block text-white hover:bg-gray-800"
+                >
+                  Nutrition
+                </Link>
+                <Link
+                  href="/services/concierge"
+                  onClick={() => setServicesOpen(false)}
+                  className="px-4 py-2 block text-white hover:bg-gray-800"
+                >
+                  Concierge Medicine
+                </Link>
+              </div>
+            </div>
+          </nav>
         </div>
-      </div>
-    </nav>
-  </div>
-</header>
+      </header>
 
-{/* Main Content */}
-<main className="container mx-auto px-8 pt-32">
-  {/* Hero Section */}
-  <section className="text-center h-screen pt-10">
-    <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
-    <div className="flex justify-center mb-6">
-      <Image
-        src="/about/headshotcolor.jpg"
-        alt="Dr. Alexandra Abbott headshot"
-        width={240}
-        height={300}
-        className="rounded-lg"
-      />
-    </div>
-    <p className="mt-4 text-lg italic max-w-2xl mx-auto">
-      Alexandra Abbott, MD is a <br /> board-certified sports medicine physician.
-    </p>
-  </section>
-</main>
+      {/* Main Content */}
+      <main className="container mx-auto px-8 pt-32">
+        {/* Hero Section */}
+        <section className="text-center h-screen pt-10">
+          <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
+          <div className="flex justify-center mb-6">
+            <Image
+              src="/about/headshotcolor.jpg"
+              alt="Dr. Alexandra Abbott headshot"
+              width={240}
+              height={300}
+              className="rounded-lg"
+            />
+          </div>
+          <p className="mt-4 text-lg italic max-w-2xl mx-auto">
+            Alexandra Abbott, MD is a <br /> board-certified sports medicine physician.
+          </p>
+        </section>
 
-{/* Extra Padding Below the Header */}
-<div className="pt-24"> {/* This adds extra padding below the fixed header to prevent overlap */}</div>
-
+        {/* This div was out of place, move it inside the main content flow if you still need it */}
+        <div className="pt-24"></div>
 
         {/* Segue */}
         <section className="mt-20 text-center">
@@ -273,7 +271,7 @@ export default function AboutPage() {
             </Link>
           </p>
         </section>
-      </main>
-    </div>
+      </main> {/* End of the main content wrapper */}
+    </> {/* End of the single root element */}
   );
 }
