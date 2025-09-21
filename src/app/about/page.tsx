@@ -16,65 +16,66 @@ export default function AboutPage() {
             ABBOTT <br /> SPORT PERFORMANCE
           </Link>
 
-          {/* Services Dropdown */}
-          <nav
-            style={{
-              position: "absolute",
-              top: "5%",
-              right: "5%",
-              zIndex: 20,
-            }}
-          >
-            <div className="dropdown">
-              <span
-                className="dropdown-label font-semibold cursor-pointer"
-                onClick={() => setServicesOpen(!servicesOpen)}
-              >
-                Services
-              </span>
-              <div
-                className={`dropdown-content ${servicesOpen ? "show" : ""}`}
-                style={{
-                  position: "absolute",
-                  backgroundColor: "black",
-                  boxShadow: "0 8px 16px rgba(0, 0, 0, 0.5)",
-                  padding: "10px 0",
-                  right: "0",
-                  minWidth: "200px",
-                  zIndex: "10",
-                }}
-              >
-                <Link
-                  href="/services/exercise"
-                  onClick={() => setServicesOpen(false)}
-                  className="px-4 py-2 block text-white hover:bg-gray-800"
-                >
-                  Exercise Programs
-                </Link>
-                <Link
-                  href="/services/rehab"
-                  onClick={() => setServicesOpen(false)}
-                  className="px-4 py-2 block text-white hover:bg-gray-800"
-                >
-                  Rehab Programs
-                </Link>
-                <Link
-                  href="/services/nutrition"
-                  onClick={() => setServicesOpen(false)}
-                  className="px-4 py-2 block text-white hover:bg-gray-800"
-                >
-                  Nutrition
-                </Link>
-                <Link
-                  href="/services/concierge"
-                  onClick={() => setServicesOpen(false)}
-                  className="px-4 py-2 block text-white hover:bg-gray-800"
-                >
-                  Concierge Medicine
-                </Link>
-              </div>
-            </div>
-          </nav>
+        {/* Services Dropdown */}
+<nav
+  style={{
+    position: "absolute",
+    top: "5%",
+    right: "5%",
+    zIndex: 20,
+  }}
+>
+  <div className="dropdown">
+    <span
+      className="dropdown-label font-semibold cursor-pointer"
+      onClick={() => setServicesOpen(!servicesOpen)}
+    >
+      Services
+    </span>
+    <div
+      className={`dropdown-content ${servicesOpen ? "show" : ""}`}
+      style={{
+        position: "absolute",
+        backgroundColor: "black",  // **CHANGE ADDED: This sets the background to black**
+        boxShadow: "0 8px 16px rgba(0, 0, 0, 0.5)",
+        padding: "10px 0",
+        right: "0",
+        minWidth: "200px",
+        zIndex: "10",
+      }}
+    >
+      <Link
+        href="/services/exercise"
+        onClick={() => setServicesOpen(false)}
+        className="px-4 py-2 block text-white hover:bg-gray-800"
+      >
+        Exercise Programs
+      </Link>
+      <Link
+        href="/services/rehab"
+        onClick={() => setServicesOpen(false)}
+        className="px-4 py-2 block text-white hover:bg-gray-800"
+      >
+        Rehab Programs
+      </Link>
+      <Link
+        href="/services/nutrition"
+        onClick={() => setServicesOpen(false)}
+        className="px-4 py-2 block text-white hover:bg-gray-800"
+      >
+        Nutrition
+      </Link>
+      <Link
+        href="/services/concierge"
+        onClick={() => setServicesOpen(false)}
+        className="px-4 py-2 block text-white hover:bg-gray-800"
+      >
+        Concierge Medicine
+      </Link>
+    </div>
+  </div>
+</nav>
+
         </div>
       </header>
 
