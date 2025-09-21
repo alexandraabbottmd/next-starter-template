@@ -91,7 +91,7 @@ export default function AboutPage() {
 
         {/* Kinesiology */}
         <section className="text-center mt-16">
-          <h2 className="text-3xl font-bold mb-6">Kinesiology with emphasis in Exercise Science</h2>
+          <h2 className="text-3xl font-bold mb-6">Kinesiology <br /> with emphasis in Exercise Science</h2>
           <div className="flex justify-center flex-wrap gap-6">
             <Image
               src="/about/kinesiology1.jpg"
@@ -126,7 +126,7 @@ export default function AboutPage() {
 
         {/* Research */}
         <section className="text-center mt-16">
-          <h2 className="text-3xl font-bold mb-6">Prolific research in Sports Medicine, Orthopedics, and Pediatrics</h2>
+          <h2 className="text-3xl font-bold mb-6">Prolific research in <br /> Sports Medicine, Orthopedics, and Pediatrics</h2>
           <div className="flex justify-center">
             <Image
               src="/about/researcher.jpg"
@@ -151,7 +151,7 @@ export default function AboutPage() {
         {/* Athletes Cared For */}
         <section className="text-center mt-16">
           <h2 className="text-3xl font-bold mb-6">
-            Thousands of athletes cared for, including NCAA Division I, NBA, MLB athletes
+            Thousands of athletes cared for, <br /> including NCAA Division I, NBA, MLB athletes
           </h2>
           <div className="flex justify-center gap-6">
             <Image
