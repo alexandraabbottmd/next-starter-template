@@ -167,8 +167,8 @@ export default function AboutPage() {
             <Image
               src="/about/researcher.jpg"
               alt="Researcher"
-              width={200}
-              height={250}
+              width={100}
+              height={200}
               className="rounded-lg"
             />
           </div>
