@@ -177,14 +177,14 @@ export default function AboutPage() {
             />
           </div>
           <p className="mt-4 text-sm italic">
-            She currently practices at Stanford Children’s —{" "}
+            She currently practices at {" "}
             <a
               href="https://www.stanfordchildrens.org/en/doctor/alexandra-morgan-abbott"
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline"
             >
-              view profile
+              Stanford University
             </a>
           </p>
         </section>
