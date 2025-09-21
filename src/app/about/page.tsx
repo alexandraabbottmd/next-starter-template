@@ -16,29 +16,49 @@ export default function AboutPage() {
             ABBOTT <br /> SPORT PERFORMANCE
           </Link>
 
-          <div
-            className="relative"
-            onMouseEnter={() => setServicesOpen(true)}
-            onMouseLeave={() => setServicesOpen(false)}
+          {/* Services Dropdown */}
+          <nav
+            style={{
+              position: "absolute",
+              top: "5%",
+              right: "5%",
+              zIndex: 20,
+            }}
           >
-            <span className="font-semibold cursor-pointer">Services</span>
-            {servicesOpen && (
-              <ul className="absolute right-0 mt-2 bg-black text-white shadow-lg rounded min-w-[200px] translate-x-[-20%] list-none">
-                <li className="px-4 py-2 hover:bg-gray-800">
-                  <Link href="/services/exercise">Exercise Programs</Link>
-                </li>
-                <li className="px-4 py-2 hover:bg-gray-800">
-                  <Link href="/services/rehab">Rehab Programs</Link>
-                </li>
-                <li className="px-4 py-2 hover:bg-gray-800">
-                  <Link href="/services/nutrition">Nutrition</Link>
-                </li>
-                <li className="px-4 py-2 hover:bg-gray-800">
-                  <Link href="/services/concierge">Concierge Medicine</Link>
-                </li>
-              </ul>
-            )}
-          </div>
+            <div className="dropdown" ref={dropdownRef}>
+              <span
+                className="dropdown-label font-semibold cursor-pointer"
+                onClick={() => setServicesOpen(!servicesOpen)}
+              >
+                Services
+              </span>
+              <div
+                className={`dropdown-content ${servicesOpen ? "show" : ""}`}
+                style={{
+                  position: "absolute",
+                  backgroundColor: "black",
+                  boxShadow: "0 8px 16px rgba(0, 0, 0, 0.5)",
+                  padding: "10px 0",
+                  right: "0",
+                  minWidth: "200px",
+                  zIndex: "10",
+                }}
+              >
+                <Link href="/services/exercise" onClick={() => setServicesOpen(false)} className="px-4 py-2 block text-white hover:bg-gray-800">
+                  Exercise Programs
+                </Link>
+                <Link href="/services/rehab" onClick={() => setServicesOpen(false)} className="px-4 py-2 block text-white hover:bg-gray-800">
+                  Rehab Programs
+                </Link>
+                <Link href="/services/nutrition" onClick={() => setServicesOpen(false)} className="px-4 py-2 block text-white hover:bg-gray-800">
+                  Nutrition
+                </Link>
+                <Link href="/services/concierge" onClick={() => setServicesOpen(false)} className="px-4 py-2 block text-white hover:bg-gray-800">
+                  Concierge Medicine
+                </Link>
+              </div>
+            </div>
+          </nav>
         </div>
       </header>
 
