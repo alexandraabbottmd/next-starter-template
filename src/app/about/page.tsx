@@ -45,8 +45,8 @@ export default function AboutPage() {
 
 
       {/* Hero */}
-      <section className="text-center mt-24">
-        <h1 className="text-4xl font-bold mb-6">Dr Abbott</h1>
+      <section className="text-center mt-32">
+        <h1 className="text-5xl font-bold mb-8">Dr Abbott</h1>
         <div className="flex justify-center">
           <Image
             src="/about/headshotcolor.jpg"
