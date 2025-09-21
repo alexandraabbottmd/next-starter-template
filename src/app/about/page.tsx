@@ -250,8 +250,5 @@ export default function AboutPage() {
     </div>
   );
 }
-        <p>Disclaimers</p>
-      </footer>
-    </div>
   );
 }
