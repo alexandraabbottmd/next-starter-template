@@ -10,10 +10,11 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-black text-white font-sans">
 {/* Fixed Header Banner */}
-<header className="fixed top-0 left-0 w-full h-16 bg-black flex justify-between items-center px-6 shadow-md z-50">
+<header className="fixed top-0 left-0 w-full h-16 bg-black bg-opacity-90 backdrop-blur flex justify-between items-center px-6 shadow-md z-50">
   <Link href="/" className="text-lg font-bold tracking-wide text-white">
     ABBOTT SPORT PERFORMANCE
   </Link>
+
   <div
     className="relative"
     onMouseEnter={() => setServicesOpen(true)}
@@ -44,7 +45,7 @@ export default function AboutPage() {
 
 
       {/* Hero */}
-      <section className="text-center mt-6">
+      <section className="text-center mt-24">
         <h1 className="text-4xl font-bold mb-6">Dr Abbott</h1>
         <div className="flex justify-center">
           <Image
