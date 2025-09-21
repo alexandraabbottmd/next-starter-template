@@ -8,40 +8,37 @@ export default function AboutPage() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-   <div className="min-h-screen bg-black text-white font-sans pt-32">
-{/* Fixed Header Banner */}
-<header className="fixed top-0 left-0 w-full h-20 bg-black flex justify-between items-center px-6 shadow-md z-50">
-  <Link href="/" className="text-lg font-bold tracking-wide text-white">
-    ABBOTT SPORT PERFORMANCE
-  </Link>
+    <div className="min-h-screen bg-black text-white font-sans pt-32">
+      {/* Fixed Header Banner */}
+      <header className="fixed top-0 left-0 w-full h-20 bg-black flex justify-between items-center px-6 shadow-md z-50">
+        <Link href="/" className="text-lg font-bold tracking-wide text-white">
+          ABBOTT SPORT PERFORMANCE
+        </Link>
 
-  <div
-    className="relative"
-    onMouseEnter={() => setServicesOpen(true)}
-    onMouseLeave={() => setServicesOpen(false)}
-  >
-    <span className="font-semibold cursor-pointer">Services ▾</span>
-    {servicesOpen && (
-  <ul className="absolute right-0 mt-2 bg-black text-white shadow-lg rounded min-w-[200px] translate-x-[-20%]">
-        <li className="px-4 py-2 hover:bg-gray-800">
-          <Link href="/services/exercise">Exercise Programs</Link>
-        </li>
-        <li className="px-4 py-2 hover:bg-gray-800">
-          <Link href="/services/rehab">Rehab Programs</Link>
-        </li>
-        <li className="px-4 py-2 hover:bg-gray-800">
-          <Link href="/services/nutrition">Nutrition</Link>
-        </li>
-        <li className="px-4 py-2 hover:bg-gray-800">
-          <Link href="/services/concierge">Concierge Medicine</Link>
-        </li>
-      </ul>
-    )}
-  </div>
-</header>
-
-
-
+        <div
+          className="relative"
+          onMouseEnter={() => setServicesOpen(true)}
+          onMouseLeave={() => setServicesOpen(false)}
+        >
+          <span className="font-semibold cursor-pointer">Services ▾</span>
+          {servicesOpen && (
+            <ul className="absolute right-0 mt-2 bg-black text-white shadow-lg rounded min-w-[200px] translate-x-[-20%]">
+              <li className="px-4 py-2 hover:bg-gray-800">
+                <Link href="/services/exercise">Exercise Programs</Link>
+              </li>
+              <li className="px-4 py-2 hover:bg-gray-800">
+                <Link href="/services/rehab">Rehab Programs</Link>
+              </li>
+              <li className="px-4 py-2 hover:bg-gray-800">
+                <Link href="/services/nutrition">Nutrition</Link>
+              </li>
+              <li className="px-4 py-2 hover:bg-gray-800">
+                <Link href="/services/concierge">Concierge Medicine</Link>
+              </li>
+            </ul>
+          )}
+        </div>
+      </header>
 
       {/* Hero */}
       <section className="text-center">
@@ -56,10 +53,10 @@ export default function AboutPage() {
           />
         </div>
         <p className="mt-4 text-lg">
-          Alexandra Abbott, MD is a <br /> board-certified sports medicine
-          physician.
+          Alexandra Abbott, MD is a <br /> board-certified sports medicine physician.
         </p>
       </section>
+
 
       {/* Segue */}
       <p className="text-center italic mt-10">
