@@ -6,8 +6,6 @@ import "./globals.css";
 
 export default function HomePage() {
   const [open, setOpen] = useState(false);
-
-  // 👇 declare the ref here
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
@@ -21,7 +19,7 @@ export default function HomePage() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []);
+  }, []); // ✅ properly closed
 
   return (
     <main style={{ margin: 0, padding: 0, overflow: "hidden", backgroundColor: "black" }}>
