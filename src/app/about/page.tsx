@@ -8,9 +8,9 @@ export default function AboutPage() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-     <div className="min-h-screen bg-black text-white font-sans">
-        {/* Fixed Header Banner */}
-          <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Fixed Header Banner */}
+      <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
         <div className="container mx-auto px-8 h-20 flex justify-between items-center">
            <Link href="/" className="text-lg font-bold tracking-wide text-white">
         ABBOTT SPORT PERFORMANCE
