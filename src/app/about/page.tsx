@@ -16,7 +16,6 @@ export default function AboutPage() {
             ABBOTT <br /> SPORT PERFORMANCE
           </Link>
 
-  
           {/* Services Dropdown */}
           <nav
             style={{
@@ -79,7 +78,8 @@ export default function AboutPage() {
         </div>
       </header>
 
-           <div className="h-20"></div>
+      {/* This spacer div is now correctly placed outside the header. */}
+      <div className="h-20"></div>
 
       {/* Main Content */}
       <main className="container mx-auto px-8 pt-32">
