@@ -8,9 +8,9 @@ export default function AboutPage() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-   <div className="min-h-screen bg-black text-white font-sans pt-24">
+   <div className="min-h-screen bg-black text-white font-sans pt-32">
 {/* Fixed Header Banner */}
-<header className="fixed top-0 left-0 w-full h-16 bg-black flex justify-between items-center px-6 shadow-md z-50">
+<header className="fixed top-0 left-0 w-full h-20 bg-black flex justify-between items-center px-6 shadow-md z-50">
   <Link href="/" className="text-lg font-bold tracking-wide text-white">
     ABBOTT SPORT PERFORMANCE
   </Link>
@@ -40,8 +40,7 @@ export default function AboutPage() {
   </div>
 </header>
 
-{/* Spacer so content starts below the header */}
-<div className="h-16" />
+
 
 
       {/* Hero */}
