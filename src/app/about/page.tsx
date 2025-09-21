@@ -221,27 +221,19 @@ export default function AboutPage() {
             <Image
               src="/about/ask dr abbott.jpg"
               alt="Ask Dr Abbott"
-              width={300}
-              height={200}
+              width={200}
+              height={300}
               className="rounded-lg"
             />
           </div>
           <p className="mt-4">
             <Link href="/contact" className="text-blue-400 hover:underline font-semibold">
-              Ask Dr. Abbott
+              Contact Us
             </Link>
           </p>
         </section>
 
-        {/* Footer */}
-        <footer className="text-center mt-16 pb-6 text-sm text-gray-400">
-          <p>Contact</p>
-          <p>Disclaimers</p>
-        </footer>
-      </main>
-    </div>
-  );
-}
+       
 
 
 
