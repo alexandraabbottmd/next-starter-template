@@ -8,8 +8,7 @@ export default function AboutPage() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <> {/* Start of the single root element */}
-      {/* Fixed Header Banner */}
+        {/* Fixed Header Banner */}
       <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
         <div className="container mx-auto px-8 h-20 flex justify-between items-center bg-black">
           <Link href="/" className="text-lg font-bold tracking-wide text-white">
