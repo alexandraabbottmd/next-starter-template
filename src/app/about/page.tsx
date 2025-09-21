@@ -78,11 +78,8 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {/* This spacer div is correctly placed to push content down. */}
-      <div className="h-20"></div>
-
-      {/* Main Content */}
-      <main className="container mx-auto px-8">
+      {/* Main Content with correct padding to clear the fixed header. */}
+      <main className="container mx-auto px-8 pt-20">
         {/* Hero Section */}
         <section className="text-center h-screen pt-20">
           <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
