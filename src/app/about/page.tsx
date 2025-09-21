@@ -65,10 +65,15 @@ export default function AboutPage() {
 
 
 
-      {/* Segue */}
-      <p className="text-center italic mt-10">
-        Her expertise comes from years of education, training, and experience:
-      </p>
+     </section>
+
+<div>
+  {/* Segue */}
+  <p className="text-center italic mt-10">
+    Her expertise comes from years of education, training, and experience:
+  </p>
+</div>
+
 
       {/* Collegiate Athlete */}
       <section className="mt-20">
