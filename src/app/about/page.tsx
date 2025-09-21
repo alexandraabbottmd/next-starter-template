@@ -241,7 +241,7 @@ export default function AboutPage() {
             <Image
               src="/about/ask dr abbott.jpg"
               alt="Ask Dr Abbott"
-              width={200}
+              width={175}
               height={350}
               className="rounded-lg"
             />
