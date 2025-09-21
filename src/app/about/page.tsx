@@ -81,7 +81,7 @@ export default function AboutPage() {
       {/* Main Content */}
       <main className="container mx-auto px-8 pt-32">
         {/* Hero Section */}
-        <section className="text-center h-screen pt-10">
+        <section className="text-center h-screen pt-20">
           <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
           <div className="flex justify-center mb-6">
             <Image
