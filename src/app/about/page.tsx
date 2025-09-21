@@ -1,11 +1,11 @@
 "use client";
 
+import { useState } from "react"; // Use state to control the dropdown visibility
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
 
 export default function AboutPage() {
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false); // State for dropdown visibility
 
   return (
     <div className="min-h-screen bg-black text-white font-sans">
@@ -25,7 +25,7 @@ export default function AboutPage() {
               zIndex: 20,
             }}
           >
-            <div className="dropdown" ref={dropdownRef}>
+            <div className="dropdown">
               <span
                 className="dropdown-label font-semibold cursor-pointer"
                 onClick={() => setServicesOpen(!servicesOpen)}
@@ -44,16 +44,32 @@ export default function AboutPage() {
                   zIndex: "10",
                 }}
               >
-                <Link href="/services/exercise" onClick={() => setServicesOpen(false)} className="px-4 py-2 block text-white hover:bg-gray-800">
+                <Link
+                  href="/services/exercise"
+                  onClick={() => setServicesOpen(false)}
+                  className="px-4 py-2 block text-white hover:bg-gray-800"
+                >
                   Exercise Programs
                 </Link>
-                <Link href="/services/rehab" onClick={() => setServicesOpen(false)} className="px-4 py-2 block text-white hover:bg-gray-800">
+                <Link
+                  href="/services/rehab"
+                  onClick={() => setServicesOpen(false)}
+                  className="px-4 py-2 block text-white hover:bg-gray-800"
+                >
                   Rehab Programs
                 </Link>
-                <Link href="/services/nutrition" onClick={() => setServicesOpen(false)} className="px-4 py-2 block text-white hover:bg-gray-800">
+                <Link
+                  href="/services/nutrition"
+                  onClick={() => setServicesOpen(false)}
+                  className="px-4 py-2 block text-white hover:bg-gray-800"
+                >
                   Nutrition
                 </Link>
-                <Link href="/services/concierge" onClick={() => setServicesOpen(false)} className="px-4 py-2 block text-white hover:bg-gray-800">
+                <Link
+                  href="/services/concierge"
+                  onClick={() => setServicesOpen(false)}
+                  className="px-4 py-2 block text-white hover:bg-gray-800"
+                >
                   Concierge Medicine
                 </Link>
               </div>
@@ -256,9 +272,3 @@ export default function AboutPage() {
     </div>
   );
 }
-
-
-       
-
-
-
