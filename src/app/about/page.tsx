@@ -171,7 +171,7 @@ export default function AboutPage() {
               rel="noopener noreferrer"
               className="text-blue-400 hover:underline"
             >
-              Dr. Abbott's Publications
+              Dr. Abbott&apos;s Publications
             </a>
           </p>
         </section>
