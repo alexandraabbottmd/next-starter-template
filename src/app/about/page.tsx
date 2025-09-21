@@ -12,10 +12,12 @@ export default function AboutPage() {
       {/* Fixed Header Banner */}
       <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
         <div className="container mx-auto px-8 h-20 flex justify-between items-center">
+          {/* Home link */}
           <Link href="/" className="text-lg font-bold tracking-wide text-white">
             ABBOTT SPORT PERFORMANCE
           </Link>
 
+          {/* Services dropdown */}
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
@@ -23,7 +25,7 @@ export default function AboutPage() {
           >
             <span className="font-semibold cursor-pointer">Services</span>
             {servicesOpen && (
-              <ul className="absolute right-0 mt-2 bg-black text-white shadow-lg rounded min-w-[200px] translate-x-[-20%] list-none">
+              <ul className="absolute right-0 mt-2 bg-black text-white shadow-lg rounded min-w-[220px] list-none">
                 <li className="px-4 py-2 hover:bg-gray-800">
                   <Link href="/services/exercise">Exercise Programs</Link>
                 </li>
@@ -45,7 +47,7 @@ export default function AboutPage() {
       {/* Main Content */}
       <main className="container mx-auto px-8 mt-24">
         {/* Hero */}
-        <section className="text-center h-screen pt-[25vh]">
+        <section className="text-center pt-[25vh]">
           <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
           <div className="flex justify-center">
             <Image
@@ -69,7 +71,7 @@ export default function AboutPage() {
 
         {/* Collegiate Athlete */}
         <section className="mt-20">
-          <h2 className="text-3xl font-bold mb-6 ml-6">Collegiate Athlete</h2>
+          <h2 className="text-3xl font-bold mb-6">Collegiate Athlete</h2>
           <div className="flex justify-center gap-6">
             <Image
               src="/about/action.jpg"
@@ -253,3 +255,4 @@ export default function AboutPage() {
     </div>
   );
 }
+
