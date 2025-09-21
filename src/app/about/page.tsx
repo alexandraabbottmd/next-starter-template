@@ -1,17 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useState } from "react"; // Importing useState for dropdown
 import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
-  const [servicesOpen, setServicesOpen] = useState(false);
+  const [servicesOpen, setServicesOpen] = useState(false); // State for dropdown visibility
 
   return (
     <div className="min-h-screen bg-black text-white font-sans">
       {/* Fixed Header Banner */}
       <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
-        <div className="container mx-auto px-8 h-20 flex justify-between items-center">
+        <div className="container mx-auto px-8 h-20 flex justify-between items-center bg-black">
           <Link href="/" className="text-lg font-bold tracking-wide text-white">
             ABBOTT <br /> SPORT PERFORMANCE
           </Link>
@@ -78,13 +78,13 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {/* This spacer div is the key to creating space for the fixed header */}
-      <div className="h-20"></div>
+      {/* Spacer to prevent content overlap */}
+      <div className="h-20"></div> {/* This spacer creates space for the fixed header */}
 
       {/* Main Content */}
-      <main className="container mx-auto px-8">
+      <main className="container mx-auto px-8 pt-32">
         {/* Hero Section */}
-        <section className="text-center h-screen pt-20">
+        <section className="text-center h-screen pt-10">
           <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
           <div className="flex justify-center mb-6">
             <Image
