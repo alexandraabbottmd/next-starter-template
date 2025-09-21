@@ -55,7 +55,7 @@ export default function HomePage() {
               fontFamily: "sans-serif",
             }}
           >
-            SCIENCE IN EVERY REP
+            SCIENCE  <br />  IN EVERY REP
           </p>
         </div>
 
