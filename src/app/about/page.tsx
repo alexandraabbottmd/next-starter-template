@@ -232,6 +232,11 @@ export default function AboutPage() {
             </Link>
           </p>
         </section>
+      </main>
+    </div>
+  );
+}
+
 
        
 
