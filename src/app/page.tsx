@@ -19,7 +19,7 @@ export default function HomePage() {
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
-  }, []); // ✅ properly closed
+  }, []);
 
   return (
     <main style={{ margin: 0, padding: 0, overflow: "hidden", backgroundColor: "black" }}>
@@ -74,13 +74,21 @@ export default function HomePage() {
               className="dropdown-label"
               onClick={() => setOpen(!open)}
             >
-              Services
-          
+              Services ▾
+            </button>
             <div className={`dropdown-content ${open ? "show" : ""}`}>
-              <Link href="/services/exercise">Exercise Programs</Link>
-              <Link href="/services/rehab">Rehab Programs</Link>
-              <Link href="/services/nutrition">Nutrition</Link>
-              <Link href="/services/concierge">Concierge Medicine</Link>
+              <Link href="/services/exercise" onClick={() => setOpen(false)}>
+                Exercise Programs
+              </Link>
+              <Link href="/services/rehab" onClick={() => setOpen(false)}>
+                Rehab Programs
+              </Link>
+              <Link href="/services/nutrition" onClick={() => setOpen(false)}>
+                Nutrition
+              </Link>
+              <Link href="/services/concierge" onClick={() => setOpen(false)}>
+                Concierge Medicine
+              </Link>
             </div>
           </div>
         </nav>
@@ -98,9 +106,10 @@ export default function HomePage() {
             fontFamily: "sans-serif",
           }}
         >
-          About Dr. Abbott
+          About Dr. Abbott →
         </Link>
       </section>
     </main>
   );
 }
+
