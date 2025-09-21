@@ -1,17 +1,17 @@
 "use client";
 
-import { useState } from "react"; // Importing useState for dropdown functionality
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function AboutPage() {
-  const [servicesOpen, setServicesOpen] = useState(false); // State for dropdown visibility
+  const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans pt-20">
-      {/* Header Banner */}
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Fixed Header Banner */}
       <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
-        <div className="container mx-auto px-8 h-20 flex justify-between items-center bg-black">
+        <div className="container mx-auto px-8 h-20 flex justify-between items-center">
           <Link href="/" className="text-lg font-bold tracking-wide text-white">
             ABBOTT <br /> SPORT PERFORMANCE
           </Link>
@@ -78,9 +78,9 @@ export default function AboutPage() {
         </div>
       </header>
 
-      {/* Main Content with correct padding to clear the fixed header. */}
-      <main className="container mx-auto px-8">
-        {/* Hero Section */}
+      {/* Main Content */}
+      <main className="container mx-auto px-8 pt-20">
+        {/* Hero Section - removed h-screen to fix overlap */}
         <section className="text-center">
           <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
           <div className="flex justify-center mb-6">
