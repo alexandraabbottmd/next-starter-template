@@ -19,7 +19,7 @@ export default function AboutPage() {
           onMouseEnter={() => setServicesOpen(true)}
           onMouseLeave={() => setServicesOpen(false)}
         >
-          <button className="font-semibold">Services</button>
+          <span className="font-semibold">Services</span>
           {servicesOpen && (
             <ul className="absolute right-0 mt-2 bg-black text-white shadow-lg rounded">
               <li className="px-4 py-2 hover:bg-gray-800">
