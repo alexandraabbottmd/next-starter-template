@@ -8,8 +8,8 @@ export default function AboutPage() {
   const [servicesOpen, setServicesOpen] = useState(false); // State for dropdown visibility
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans">
-      {/* Fixed Header Banner */}
+    <div className="min-h-screen bg-black text-white font-sans pt-20">
+      {/* Header Banner */}
       <header className="fixed top-0 left-0 w-full bg-black shadow-md z-50">
         <div className="container mx-auto px-8 h-20 flex justify-between items-center bg-black">
           <Link href="/" className="text-lg font-bold tracking-wide text-white">
@@ -79,9 +79,9 @@ export default function AboutPage() {
       </header>
 
       {/* Main Content with correct padding to clear the fixed header. */}
-      <main className="container mx-auto px-8 pt-20">
+      <main className="container mx-auto px-8">
         {/* Hero Section */}
-        <section className="text-center h-screen pt-20">
+        <section className="text-center">
           <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
           <div className="flex justify-center mb-6">
             <Image
