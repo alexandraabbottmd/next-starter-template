@@ -8,12 +8,15 @@ export default function AboutPage() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-black text-white font-sans pt-20">
+   <div className="min-h-screen bg-black text-white font-sans pt-24">
 {/* Fixed Header Banner */}
-<header className="fixed top-0 left-0 w-full h-16 bg-black bg-opacity-90 backdrop-blur flex justify-between items-center px-6 shadow-md z-50">
+<header className="fixed top-0 left-0 w-full h-16 bg-black flex justify-between items-center px-6 shadow-md z-50">
   <Link href="/" className="text-lg font-bold tracking-wide text-white">
     ABBOTT SPORT PERFORMANCE
   </Link>
+  ...
+</header>
+
 
   <div
     className="relative"
@@ -45,8 +48,8 @@ export default function AboutPage() {
 
 
       {/* Hero */}
-      <section className="text-center mt-32">
-        <h1 className="text-5xl font-bold mb-8">Dr Abbott</h1>
+      <section className="text-center">
+        <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
         <div className="flex justify-center">
           <Image
             src="/about/headshotcolor.jpg"
