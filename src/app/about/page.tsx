@@ -20,7 +20,7 @@ export default function AboutPage() {
           onMouseEnter={() => setServicesOpen(true)}
           onMouseLeave={() => setServicesOpen(false)}
         >
-          <span className="font-semibold cursor-pointer">Services ▾</span>
+          <span className="font-semibold cursor-pointer">Services   /span>
           {servicesOpen && (
             <ul className="absolute right-0 mt-2 bg-black text-white shadow-lg rounded min-w-[200px] translate-x-[-20%] list-none">
               <li className="px-4 py-2 hover:bg-gray-800">
@@ -44,14 +44,14 @@ export default function AboutPage() {
       <div className="h-28" />
 
   {/* Hero */}
-<section className="text-center h-screen pt-[25vh]">
+<section className="text-center h-screen pt-[15vh]">
   <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
   <div className="flex justify-center">
     <Image
       src="/about/headshotcolor.jpg"
       alt="Dr. Alexandra Abbott headshot"
       width={240}
-      height={300}
+      height={350}
       className="rounded-lg"
     />
   </div>
