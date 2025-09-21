@@ -74,8 +74,8 @@ export default function HomePage() {
               className="dropdown-label"
               onClick={() => setOpen(!open)}
             >
-              Services ▾
-            </button>
+              Services
+            </span>
             <div className={`dropdown-content ${open ? "show" : ""}`}>
               <Link href="/services/exercise" onClick={() => setOpen(false)}>
                 Exercise Programs
