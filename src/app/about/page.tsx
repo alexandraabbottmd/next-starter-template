@@ -8,59 +8,57 @@ export default function AboutPage() {
   const [servicesOpen, setServicesOpen] = useState(false);
 
   return (
-  <div className="min-h-screen bg-black text-white font-sans">
-    {/* Fixed Header Banner */}
-    <header className="fixed top-0 left-0 w-full h-20 bg-black flex justify-between items-center px-6 shadow-md z-50">
-      <Link href="/" className="text-lg font-bold tracking-wide text-white">
-        ABBOTT SPORT PERFORMANCE
-      </Link>
+    <div className="min-h-screen bg-black text-white font-sans">
+      {/* Fixed Header Banner */}
+      <header className="fixed top-0 left-0 w-full h-20 bg-black flex justify-between items-center px-6 shadow-md z-50">
+        <Link href="/" className="text-lg font-bold tracking-wide text-white">
+          ABBOTT SPORT PERFORMANCE
+        </Link>
 
-      <div
-        className="relative"
-        onMouseEnter={() => setServicesOpen(true)}
-        onMouseLeave={() => setServicesOpen(false)}
-      >
-        <span className="font-semibold cursor-pointer">Services ▾</span>
-        {servicesOpen && (
-          <ul className="absolute right-0 mt-2 bg-black text-white shadow-lg rounded min-w-[200px] translate-x-[-20%]">
-            <li className="px-4 py-2 hover:bg-gray-800">
-              <Link href="/services/exercise">Exercise Programs</Link>
-            </li>
-            <li className="px-4 py-2 hover:bg-gray-800">
-              <Link href="/services/rehab">Rehab Programs</Link>
-            </li>
-            <li className="px-4 py-2 hover:bg-gray-800">
-              <Link href="/services/nutrition">Nutrition</Link>
-            </li>
-            <li className="px-4 py-2 hover:bg-gray-800">
-              <Link href="/services/concierge">Concierge Medicine</Link>
-            </li>
-          </ul>
-        )}
-      </div>
-    </header>
+        <div
+          className="relative"
+          onMouseEnter={() => setServicesOpen(true)}
+          onMouseLeave={() => setServicesOpen(false)}
+        >
+          <span className="font-semibold cursor-pointer">Services ▾</span>
+          {servicesOpen && (
+            <ul className="absolute right-0 mt-2 bg-black text-white shadow-lg rounded min-w-[200px] translate-x-[-20%] list-none">
+              <li className="px-4 py-2 hover:bg-gray-800">
+                <Link href="/services/exercise">Exercise Programs</Link>
+              </li>
+              <li className="px-4 py-2 hover:bg-gray-800">
+                <Link href="/services/rehab">Rehab Programs</Link>
+              </li>
+              <li className="px-4 py-2 hover:bg-gray-800">
+                <Link href="/services/nutrition">Nutrition</Link>
+              </li>
+              <li className="px-4 py-2 hover:bg-gray-800">
+                <Link href="/services/concierge">Concierge Medicine</Link>
+              </li>
+            </ul>
+          )}
+        </div>
+      </header>
 
-    {/* Spacer to push content below header */}
-    <div className="h-28" />
+      {/* Spacer to push content below header */}
+      <div className="h-28" />
 
-    {/* Hero */}
-    <section className="text-center">
-      <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
-      <div className="flex justify-center">
-        <Image
-          src="/about/headshotcolor.jpg"
-          alt="Headshot"
-          width={320}
-          height={400}
-          className="rounded-lg"
-        />
-      </div>
-      <p className="mt-4 text-lg">
-        Alexandra Abbott, MD is a <br /> board-certified sports medicine physician.
-      </p>
-    </section>
-
-
+      {/* Hero */}
+      <section className="text-center mt-12">
+        <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
+        <div className="flex justify-center">
+          <Image
+            src="/about/headshotcolor.jpg"
+            alt="Dr. Alexandra Abbott headshot"
+            width={240}
+            height={300}
+            className="rounded-lg"
+          />
+        </div>
+        <p className="mt-4 text-lg italic">
+          Alexandra Abbott, MD is a <br /> board-certified sports medicine physician.
+        </p>
+      </section>
 
       {/* Segue */}
       <p className="text-center italic mt-10">
@@ -68,22 +66,22 @@ export default function AboutPage() {
       </p>
 
       {/* Collegiate Athlete */}
-      <section className="text-center mt-12">
-        <h2 className="text-3xl font-bold mb-6">Collegiate Athlete</h2>
+      <section className="mt-20">
+        <h2 className="text-3xl font-bold mb-6 ml-6">Collegiate Athlete</h2>
         <div className="flex justify-center gap-6">
           <Image
             src="/about/action.jpg"
             alt="Goalkeeper save"
             width={300}
             height={200}
-            className="rounded-lg"
+            className="rounded-lg object-cover"
           />
           <Image
             src="/about/action2.jpg"
             alt="Soccer action"
             width={300}
             height={200}
-            className="rounded-lg"
+            className="rounded-lg object-cover"
           />
         </div>
       </section>
@@ -247,6 +245,11 @@ export default function AboutPage() {
       {/* Footer */}
       <footer className="text-center mt-16 pb-6 text-sm text-gray-400">
         <p>Contact</p>
+        <p>Disclaimers</p>
+      </footer>
+    </div>
+  );
+}
         <p>Disclaimers</p>
       </footer>
     </div>
