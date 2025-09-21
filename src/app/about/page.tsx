@@ -14,9 +14,6 @@ export default function AboutPage() {
   <Link href="/" className="text-lg font-bold tracking-wide text-white">
     ABBOTT SPORT PERFORMANCE
   </Link>
-  ...
-</header>
-
 
   <div
     className="relative"
