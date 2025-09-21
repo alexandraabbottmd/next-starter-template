@@ -43,22 +43,23 @@ export default function AboutPage() {
       {/* Spacer to push content below header */}
       <div className="h-28" />
 
-      {/* Hero */}
-      <section className="text-center mt-12">
-        <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
-        <div className="flex justify-center">
-          <Image
-            src="/about/headshotcolor.jpg"
-            alt="Dr. Alexandra Abbott headshot"
-            width={240}
-            height={300}
-            className="rounded-lg"
-          />
-        </div>
-        <p className="mt-4 text-lg italic">
-          Alexandra Abbott, MD is a <br /> board-certified sports medicine physician.
-        </p>
-      </section>
+  {/* Hero */}
+<section className="text-center h-screen pt-[25vh]">
+  <h1 className="text-5xl font-bold mb-6">Dr Abbott</h1>
+  <div className="flex justify-center">
+    <Image
+      src="/about/headshotcolor.jpg"
+      alt="Dr. Alexandra Abbott headshot"
+      width={240}
+      height={300}
+      className="rounded-lg"
+    />
+  </div>
+  <p className="mt-4 text-lg italic">
+    Alexandra Abbott, MD is a <br /> board-certified sports medicine physician.
+  </p>
+</section>
+
 
       {/* Segue */}
       <p className="text-center italic mt-10">
