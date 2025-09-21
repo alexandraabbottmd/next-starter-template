@@ -63,10 +63,6 @@ export default function AboutPage() {
   </main>
 </div>
 
-
-
-     </section>
-
 <div>
   {/* Segue */}
   <p className="text-center italic mt-10">
